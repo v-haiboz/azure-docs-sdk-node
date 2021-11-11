@@ -85,54 +85,6 @@ methods:
       return:
         type: '<xref uid="azure-arm-keyvault.Operation" />[]'
         description: ''
-  - name: 'copyWithin(number, number, number)'
-    uid: azure-arm-keyvault.OperationListResult.copyWithin
-    package: azure-arm-keyvault
-    summary: >-
-      Returns the this object after copying a section of the array identified by
-      start and end
-
-      to the same array starting at position target
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function copyWithin(target: number, start: number, end?: number)'
-      parameters:
-        - id: target
-          type: number
-          description: >-
-            If target is negative, it is treated as length+target where length
-            is the
-
-            length of the array.
-        - id: start
-          type: number
-          description: >-
-            If start is negative, it is treated as length+start. If end is
-            negative, it
-
-            is treated as length+end.
-        - id: end
-          type: number
-          description: >
-            If not specified, length of the this object is used as its default
-            value.
-      return:
-        type: this
-        description: ''
-  - name: entries()
-    uid: azure-arm-keyvault.OperationListResult.entries
-    package: azure-arm-keyvault
-    summary: 'Returns an iterable of key, value pairs for every entry in the array'
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function entries()
-      return:
-        type: IterableIterator&lt;Object&gt;
-        description: ''
   - name: >-
       every((value: Operation, index: number, array: Operation[]) => unknown,
       any)
@@ -161,38 +113,6 @@ methods:
             value.
       return:
         type: boolean
-        description: ''
-  - name: 'fill(Operation, number, number)'
-    uid: azure-arm-keyvault.OperationListResult.fill
-    package: azure-arm-keyvault
-    summary: >-
-      Returns the this object after filling the section identified by start and
-      end with value
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function fill(value: Operation, start?: number, end?: number)'
-      parameters:
-        - id: value
-          type: <xref uid="azure-arm-keyvault.Operation" />
-          description: value to fill array section with
-        - id: start
-          type: number
-          description: >-
-            index to start filling the array at. If start is negative, it is
-            treated as
-
-            length+start where length is the length of the array.
-        - id: end
-          type: number
-          description: >
-            index to stop filling the array at. If end is negative, it is
-            treated as
-
-            length+end.
-      return:
-        type: this
         description: ''
   - name: >-
       filter((value: Operation, index: number, array: Operation[]) => unknown,
@@ -256,107 +176,6 @@ methods:
       return:
         type: 'S[]'
         description: ''
-  - name: 'find((value: Operation, index: number, obj: Operation[]) => unknown, any)'
-    uid: azure-arm-keyvault.OperationListResult.find_1
-    package: azure-arm-keyvault
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function find(predicate: (value: Operation, index: number, obj:
-        Operation[]) => unknown, thisArg?: any)
-      parameters:
-        - id: predicate
-          type: '(value: Operation, index: number, obj: Operation[]) =&gt; unknown'
-          description: ''
-        - id: thisArg
-          type: any
-          description: ''
-      return:
-        type: <xref uid="azure-arm-keyvault.Operation" /> | undefined
-        description: ''
-  - name: >-
-      find<S>((this: void, value: Operation, index: number, obj: Operation[]) =>
-      boolean, any)
-    uid: azure-arm-keyvault.OperationListResult.find
-    package: azure-arm-keyvault
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function find<S>(predicate: (this: void, value: Operation, index:
-        number, obj: Operation[]) => boolean, thisArg?: any)
-      parameters:
-        - id: predicate
-          type: >-
-            (this: void, value: Operation, index: number, obj: Operation[])
-            =&gt; boolean
-          description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found, find
-
-            immediately returns that element value. Otherwise, find returns
-            undefined.
-        - id: thisArg
-          type: any
-          description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
-      return:
-        type: S | undefined
-        description: ''
-  - name: >-
-      findIndex((value: Operation, index: number, obj: Operation[]) => unknown,
-      any)
-    uid: azure-arm-keyvault.OperationListResult.findIndex
-    package: azure-arm-keyvault
-    summary: >-
-      Returns the index of the first element in the array where predicate is
-      true, and -1
-
-      otherwise.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function findIndex(predicate: (value: Operation, index: number, obj:
-        Operation[]) => unknown, thisArg?: any)
-      parameters:
-        - id: predicate
-          type: '(value: Operation, index: number, obj: Operation[]) =&gt; unknown'
-          description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found,
-
-            findIndex immediately returns that element index. Otherwise,
-            findIndex returns -1.
-        - id: thisArg
-          type: any
-          description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
-      return:
-        type: number
-        description: ''
   - name: >-
       forEach((value: Operation, index: number, array: Operation[]) => void,
       any)
@@ -382,29 +201,6 @@ methods:
             An object to which the this keyword can refer in the callbackfn
             function. If thisArg is omitted, undefined is used as the this
             value.
-  - name: 'includes(Operation, number)'
-    uid: azure-arm-keyvault.OperationListResult.includes
-    package: azure-arm-keyvault
-    summary: >-
-      Determines whether an array includes a certain element, returning true or
-      false as appropriate.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function includes(searchElement: Operation, fromIndex?: number)'
-      parameters:
-        - id: searchElement
-          type: <xref uid="azure-arm-keyvault.Operation" />
-          description: The element to search for.
-        - id: fromIndex
-          type: number
-          description: >
-            The position in this array at which to begin searching for
-            searchElement.
-      return:
-        type: boolean
-        description: ''
   - name: 'indexOf(Operation, number)'
     uid: azure-arm-keyvault.OperationListResult.indexOf
     package: azure-arm-keyvault
@@ -446,18 +242,6 @@ methods:
             with a comma.
       return:
         type: string
-        description: ''
-  - name: keys()
-    uid: azure-arm-keyvault.OperationListResult.keys
-    package: azure-arm-keyvault
-    summary: Returns an iterable of keys in the array
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function keys()
-      return:
-        type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Operation, number)'
     uid: azure-arm-keyvault.OperationListResult.lastIndexOf
@@ -905,17 +689,5 @@ methods:
             Elements to insert at the start of the Array.
       return:
         type: number
-        description: ''
-  - name: values()
-    uid: azure-arm-keyvault.OperationListResult.values
-    package: azure-arm-keyvault
-    summary: Returns an iterable of values in the array
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function values()
-      return:
-        type: IterableIterator&lt;<xref uid="azure-arm-keyvault.Operation" />&gt;
         description: ''
 extends: Array&lt;<xref uid="azure-arm-keyvault.Operation" />&gt;

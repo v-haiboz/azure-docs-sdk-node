@@ -85,54 +85,6 @@ methods:
       return:
         type: '<xref uid="azure-keyvault.CertificateItem" />[]'
         description: ''
-  - name: 'copyWithin(number, number, number)'
-    uid: azure-keyvault.CertificateListResult.copyWithin
-    package: azure-keyvault
-    summary: >-
-      Returns the this object after copying a section of the array identified by
-      start and end
-
-      to the same array starting at position target
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function copyWithin(target: number, start: number, end?: number)'
-      parameters:
-        - id: target
-          type: number
-          description: >-
-            If target is negative, it is treated as length+target where length
-            is the
-
-            length of the array.
-        - id: start
-          type: number
-          description: >-
-            If start is negative, it is treated as length+start. If end is
-            negative, it
-
-            is treated as length+end.
-        - id: end
-          type: number
-          description: >
-            If not specified, length of the this object is used as its default
-            value.
-      return:
-        type: this
-        description: ''
-  - name: entries()
-    uid: azure-keyvault.CertificateListResult.entries
-    package: azure-keyvault
-    summary: 'Returns an iterable of key, value pairs for every entry in the array'
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function entries()
-      return:
-        type: IterableIterator&lt;Object&gt;
-        description: ''
   - name: >-
       every((value: CertificateItem, index: number, array: CertificateItem[]) =>
       unknown, any)
@@ -163,38 +115,6 @@ methods:
             value.
       return:
         type: boolean
-        description: ''
-  - name: 'fill(CertificateItem, number, number)'
-    uid: azure-keyvault.CertificateListResult.fill
-    package: azure-keyvault
-    summary: >-
-      Returns the this object after filling the section identified by start and
-      end with value
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function fill(value: CertificateItem, start?: number, end?: number)'
-      parameters:
-        - id: value
-          type: <xref uid="azure-keyvault.CertificateItem" />
-          description: value to fill array section with
-        - id: start
-          type: number
-          description: >-
-            index to start filling the array at. If start is negative, it is
-            treated as
-
-            length+start where length is the length of the array.
-        - id: end
-          type: number
-          description: >
-            index to stop filling the array at. If end is negative, it is
-            treated as
-
-            length+end.
-      return:
-        type: this
         description: ''
   - name: >-
       filter((value: CertificateItem, index: number, array: CertificateItem[])
@@ -263,113 +183,6 @@ methods:
         type: 'S[]'
         description: ''
   - name: >-
-      find((value: CertificateItem, index: number, obj: CertificateItem[]) =>
-      unknown, any)
-    uid: azure-keyvault.CertificateListResult.find_1
-    package: azure-keyvault
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function find(predicate: (value: CertificateItem, index: number, obj:
-        CertificateItem[]) => unknown, thisArg?: any)
-      parameters:
-        - id: predicate
-          type: >-
-            (value: CertificateItem, index: number, obj: CertificateItem[])
-            =&gt; unknown
-          description: ''
-        - id: thisArg
-          type: any
-          description: ''
-      return:
-        type: <xref uid="azure-keyvault.CertificateItem" /> | undefined
-        description: ''
-  - name: >-
-      find<S>((this: void, value: CertificateItem, index: number, obj:
-      CertificateItem[]) => boolean, any)
-    uid: azure-keyvault.CertificateListResult.find
-    package: azure-keyvault
-    summary: >-
-      Returns the value of the first element in the array where predicate is
-      true, and undefined
-
-      otherwise.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function find<S>(predicate: (this: void, value: CertificateItem, index:
-        number, obj: CertificateItem[]) => boolean, thisArg?: any)
-      parameters:
-        - id: predicate
-          type: >-
-            (this: void, value: CertificateItem, index: number, obj:
-            CertificateItem[]) =&gt; boolean
-          description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found, find
-
-            immediately returns that element value. Otherwise, find returns
-            undefined.
-        - id: thisArg
-          type: any
-          description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
-      return:
-        type: S | undefined
-        description: ''
-  - name: >-
-      findIndex((value: CertificateItem, index: number, obj: CertificateItem[])
-      => unknown, any)
-    uid: azure-keyvault.CertificateListResult.findIndex
-    package: azure-keyvault
-    summary: >-
-      Returns the index of the first element in the array where predicate is
-      true, and -1
-
-      otherwise.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function findIndex(predicate: (value: CertificateItem, index: number,
-        obj: CertificateItem[]) => unknown, thisArg?: any)
-      parameters:
-        - id: predicate
-          type: >-
-            (value: CertificateItem, index: number, obj: CertificateItem[])
-            =&gt; unknown
-          description: >-
-            find calls predicate once for each element of the array, in
-            ascending
-
-            order, until it finds one where predicate returns true. If such an
-            element is found,
-
-            findIndex immediately returns that element index. Otherwise,
-            findIndex returns -1.
-        - id: thisArg
-          type: any
-          description: >
-            If provided, it will be used as the this value for each invocation
-            of
-
-            predicate. If it is not provided, undefined is used instead.
-      return:
-        type: number
-        description: ''
-  - name: >-
       forEach((value: CertificateItem, index: number, array: CertificateItem[])
       => void, any)
     uid: azure-keyvault.CertificateListResult.forEach
@@ -396,29 +209,6 @@ methods:
             An object to which the this keyword can refer in the callbackfn
             function. If thisArg is omitted, undefined is used as the this
             value.
-  - name: 'includes(CertificateItem, number)'
-    uid: azure-keyvault.CertificateListResult.includes
-    package: azure-keyvault
-    summary: >-
-      Determines whether an array includes a certain element, returning true or
-      false as appropriate.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function includes(searchElement: CertificateItem, fromIndex?: number)'
-      parameters:
-        - id: searchElement
-          type: <xref uid="azure-keyvault.CertificateItem" />
-          description: The element to search for.
-        - id: fromIndex
-          type: number
-          description: >
-            The position in this array at which to begin searching for
-            searchElement.
-      return:
-        type: boolean
-        description: ''
   - name: 'indexOf(CertificateItem, number)'
     uid: azure-keyvault.CertificateListResult.indexOf
     package: azure-keyvault
@@ -460,18 +250,6 @@ methods:
             with a comma.
       return:
         type: string
-        description: ''
-  - name: keys()
-    uid: azure-keyvault.CertificateListResult.keys
-    package: azure-keyvault
-    summary: Returns an iterable of keys in the array
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function keys()
-      return:
-        type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(CertificateItem, number)'
     uid: azure-keyvault.CertificateListResult.lastIndexOf
@@ -937,17 +715,5 @@ methods:
             Elements to insert at the start of the Array.
       return:
         type: number
-        description: ''
-  - name: values()
-    uid: azure-keyvault.CertificateListResult.values
-    package: azure-keyvault
-    summary: Returns an iterable of values in the array
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function values()
-      return:
-        type: IterableIterator&lt;<xref uid="azure-keyvault.CertificateItem" />&gt;
         description: ''
 extends: Array&lt;<xref uid="azure-keyvault.CertificateItem" />&gt;
