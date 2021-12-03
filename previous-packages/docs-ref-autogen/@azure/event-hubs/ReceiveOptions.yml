@@ -24,8 +24,8 @@ properties:
     syntax:
       content: 'consumerGroup?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: enableReceiverRuntimeMetric
     uid: '@azure/event-hubs.ReceiveOptions.enableReceiverRuntimeMetric'
     package: '@azure/event-hubs'
@@ -39,8 +39,8 @@ properties:
     syntax:
       content: 'enableReceiverRuntimeMetric?: undefined | false | true'
       return:
-        type: undefined | false | true
         description: ''
+        type: undefined | false | true
   - name: epoch
     uid: '@azure/event-hubs.ReceiveOptions.epoch'
     package: '@azure/event-hubs'
@@ -54,8 +54,8 @@ properties:
     syntax:
       content: 'epoch?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
   - name: eventPosition
     uid: '@azure/event-hubs.ReceiveOptions.eventPosition'
     package: '@azure/event-hubs'
@@ -71,8 +71,8 @@ properties:
     syntax:
       content: 'eventPosition?: EventPosition'
       return:
-        type: <xref uid="@azure/event-hubs.EventPosition" />
         description: ''
+        type: <xref uid="@azure/event-hubs.EventPosition" />
   - name: identifier
     uid: '@azure/event-hubs.ReceiveOptions.identifier'
     package: '@azure/event-hubs'
@@ -86,8 +86,8 @@ properties:
     syntax:
       content: 'identifier?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: name
     uid: '@azure/event-hubs.ReceiveOptions.name'
     package: '@azure/event-hubs'
@@ -101,8 +101,8 @@ properties:
     syntax:
       content: 'name?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: prefetchCount
     uid: '@azure/event-hubs.ReceiveOptions.prefetchCount'
     package: '@azure/event-hubs'
@@ -118,5 +118,5 @@ properties:
     syntax:
       content: 'prefetchCount?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number

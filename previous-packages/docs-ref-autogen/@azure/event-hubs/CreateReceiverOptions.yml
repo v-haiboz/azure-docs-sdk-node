@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'eventPosition?: EventPosition'
       return:
-        type: <xref uid="@azure/event-hubs.EventPosition" />
         description: ''
+        type: <xref uid="@azure/event-hubs.EventPosition" />
   - name: newName
     uid: '@azure/event-hubs.CreateReceiverOptions.newName'
     package: '@azure/event-hubs'
@@ -33,8 +33,8 @@ properties:
     syntax:
       content: 'newName?: undefined | false | true'
       return:
-        type: undefined | false | true
         description: ''
+        type: undefined | false | true
   - name: onClose
     uid: '@azure/event-hubs.CreateReceiverOptions.onClose'
     package: '@azure/event-hubs'
@@ -46,8 +46,8 @@ properties:
     syntax:
       content: 'onClose: OnAmqpEvent'
       return:
-        type: OnAmqpEvent
         description: ''
+        type: OnAmqpEvent
   - name: onError
     uid: '@azure/event-hubs.CreateReceiverOptions.onError'
     package: '@azure/event-hubs'
@@ -59,8 +59,8 @@ properties:
     syntax:
       content: 'onError: OnAmqpEvent'
       return:
-        type: OnAmqpEvent
         description: ''
+        type: OnAmqpEvent
   - name: onMessage
     uid: '@azure/event-hubs.CreateReceiverOptions.onMessage'
     package: '@azure/event-hubs'
@@ -72,8 +72,8 @@ properties:
     syntax:
       content: 'onMessage: OnAmqpEvent'
       return:
-        type: OnAmqpEvent
         description: ''
+        type: OnAmqpEvent
   - name: onSessionClose
     uid: '@azure/event-hubs.CreateReceiverOptions.onSessionClose'
     package: '@azure/event-hubs'
@@ -85,8 +85,8 @@ properties:
     syntax:
       content: 'onSessionClose: OnAmqpEvent'
       return:
-        type: OnAmqpEvent
         description: ''
+        type: OnAmqpEvent
   - name: onSessionError
     uid: '@azure/event-hubs.CreateReceiverOptions.onSessionError'
     package: '@azure/event-hubs'
@@ -98,5 +98,5 @@ properties:
     syntax:
       content: 'onSessionError: OnAmqpEvent'
       return:
-        type: OnAmqpEvent
         description: ''
+        type: OnAmqpEvent

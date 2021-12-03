@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'Array: ArrayConstructor'
       return:
-        type: ArrayConstructor
         description: ''
+        type: ArrayConstructor
   - name: length
     uid: azure-keyvault.CertificateListResult.length
     package: azure-keyvault
@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'length: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: nextLink
     uid: azure-keyvault.CertificateListResult.nextLink
     package: azure-keyvault
@@ -48,8 +48,8 @@ properties:
     syntax:
       content: 'nextLink?: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'concat(ConcatArray<CertificateItem>[])'
     uid: azure-keyvault.CertificateListResult.concat
@@ -59,15 +59,17 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: ConcatArray<CertificateItem>[])'
+      content: >-
+        function concat(items: ConcatArray<CertificateItem>[]):
+        CertificateItem[]
       parameters:
         - id: items
           type: 'ConcatArray&lt;<xref uid="azure-keyvault.CertificateItem" />&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
   - name: 'concat(T | ConcatArray<T>[])'
     uid: azure-keyvault.CertificateListResult.concat_1
     package: azure-keyvault
@@ -76,15 +78,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: T | ConcatArray<T>[]): CertificateItem[]'
       parameters:
         - id: items
           type: 'T | ConcatArray&lt;T&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
   - name: >-
       every((value: CertificateItem, index: number, array: CertificateItem[]) =>
       unknown, any)
@@ -97,7 +99,7 @@ methods:
     syntax:
       content: >-
         function every(callbackfn: (value: CertificateItem, index: number,
-        array: CertificateItem[]) => unknown, thisArg?: any)
+        array: CertificateItem[]) => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: >-
@@ -114,8 +116,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: >-
       filter((value: CertificateItem, index: number, array: CertificateItem[])
       => unknown, any)
@@ -130,7 +132,7 @@ methods:
     syntax:
       content: >-
         function filter(callbackfn: (value: CertificateItem, index: number,
-        array: CertificateItem[]) => unknown, thisArg?: any)
+        array: CertificateItem[]) => unknown, thisArg?: any): CertificateItem[]
       parameters:
         - id: callbackfn
           type: >-
@@ -147,8 +149,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
   - name: >-
       filter<S>((value: CertificateItem, index: number, array:
       CertificateItem[]) => boolean, any)
@@ -163,7 +165,7 @@ methods:
     syntax:
       content: >-
         function filter<S>(callbackfn: (value: CertificateItem, index: number,
-        array: CertificateItem[]) => boolean, thisArg?: any)
+        array: CertificateItem[]) => boolean, thisArg?: any): S[]
       parameters:
         - id: callbackfn
           type: >-
@@ -180,8 +182,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'S[]'
         description: ''
+        type: 'S[]'
   - name: >-
       forEach((value: CertificateItem, index: number, array: CertificateItem[])
       => void, any)
@@ -217,7 +219,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function indexOf(searchElement: CertificateItem, fromIndex?: number)'
+      content: >-
+        function indexOf(searchElement: CertificateItem, fromIndex?: number):
+        number
       parameters:
         - id: searchElement
           type: <xref uid="azure-keyvault.CertificateItem" />
@@ -228,8 +232,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at index 0.
       return:
-        type: number
         description: ''
+        type: number
   - name: join(string)
     uid: azure-keyvault.CertificateListResult.join
     package: azure-keyvault
@@ -240,7 +244,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function join(separator?: string)'
+      content: 'function join(separator?: string): string'
       parameters:
         - id: separator
           type: string
@@ -249,8 +253,8 @@ methods:
             the resulting String. If omitted, the array elements are separated
             with a comma.
       return:
-        type: string
         description: ''
+        type: string
   - name: 'lastIndexOf(CertificateItem, number)'
     uid: azure-keyvault.CertificateListResult.lastIndexOf
     package: azure-keyvault
@@ -259,7 +263,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function lastIndexOf(searchElement: CertificateItem, fromIndex?: number)'
+      content: >-
+        function lastIndexOf(searchElement: CertificateItem, fromIndex?:
+        number): number
       parameters:
         - id: searchElement
           type: <xref uid="azure-keyvault.CertificateItem" />
@@ -270,8 +276,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
       return:
-        type: number
         description: ''
+        type: number
   - name: >-
       map<U>((value: CertificateItem, index: number, array: CertificateItem[])
       => U, any)
@@ -286,7 +292,7 @@ methods:
     syntax:
       content: >-
         function map<U>(callbackfn: (value: CertificateItem, index: number,
-        array: CertificateItem[]) => U, thisArg?: any)
+        array: CertificateItem[]) => U, thisArg?: any): U[]
       parameters:
         - id: callbackfn
           type: >-
@@ -302,8 +308,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'U[]'
         description: ''
+        type: 'U[]'
   - name: pop()
     uid: azure-keyvault.CertificateListResult.pop
     package: azure-keyvault
@@ -312,10 +318,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function pop()
+      content: 'function pop(): CertificateItem | undefined'
       return:
-        type: <xref uid="azure-keyvault.CertificateItem" /> | undefined
         description: ''
+        type: <xref uid="azure-keyvault.CertificateItem" /> | undefined
   - name: 'push(CertificateItem[])'
     uid: azure-keyvault.CertificateListResult.push
     package: azure-keyvault
@@ -324,15 +330,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function push(items: CertificateItem[])'
+      content: 'function push(items: CertificateItem[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-keyvault.CertificateItem" />[]'
           description: |
             New elements of the Array.
       return:
-        type: number
         description: ''
+        type: number
   - name: >-
       reduce((previousValue: CertificateItem, currentValue: CertificateItem,
       currentIndex: number, array: CertificateItem[]) => CertificateItem)
@@ -349,7 +355,7 @@ methods:
       content: >-
         function reduce(callbackfn: (previousValue: CertificateItem,
         currentValue: CertificateItem, currentIndex: number, array:
-        CertificateItem[]) => CertificateItem)
+        CertificateItem[]) => CertificateItem): CertificateItem
       parameters:
         - id: callbackfn
           type: >-
@@ -361,8 +367,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-keyvault.CertificateItem" />
         description: ''
+        type: <xref uid="azure-keyvault.CertificateItem" />
   - name: >-
       reduce((previousValue: CertificateItem, currentValue: CertificateItem,
       currentIndex: number, array: CertificateItem[]) => CertificateItem,
@@ -377,7 +383,8 @@ methods:
       content: >-
         function reduce(callbackfn: (previousValue: CertificateItem,
         currentValue: CertificateItem, currentIndex: number, array:
-        CertificateItem[]) => CertificateItem, initialValue: CertificateItem)
+        CertificateItem[]) => CertificateItem, initialValue: CertificateItem):
+        CertificateItem
       parameters:
         - id: callbackfn
           type: >-
@@ -389,8 +396,8 @@ methods:
           type: <xref uid="azure-keyvault.CertificateItem" />
           description: ''
       return:
-        type: <xref uid="azure-keyvault.CertificateItem" />
         description: ''
+        type: <xref uid="azure-keyvault.CertificateItem" />
   - name: >-
       reduce<U>((previousValue: U, currentValue: CertificateItem, currentIndex:
       number, array: CertificateItem[]) => U, U)
@@ -407,7 +414,7 @@ methods:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue:
         CertificateItem, currentIndex: number, array: CertificateItem[]) => U,
-        initialValue: U)
+        initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -424,8 +431,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: >-
       reduceRight((previousValue: CertificateItem, currentValue:
       CertificateItem, currentIndex: number, array: CertificateItem[]) =>
@@ -444,7 +451,7 @@ methods:
       content: >-
         function reduceRight(callbackfn: (previousValue: CertificateItem,
         currentValue: CertificateItem, currentIndex: number, array:
-        CertificateItem[]) => CertificateItem)
+        CertificateItem[]) => CertificateItem): CertificateItem
       parameters:
         - id: callbackfn
           type: >-
@@ -456,8 +463,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-keyvault.CertificateItem" />
         description: ''
+        type: <xref uid="azure-keyvault.CertificateItem" />
   - name: >-
       reduceRight((previousValue: CertificateItem, currentValue:
       CertificateItem, currentIndex: number, array: CertificateItem[]) =>
@@ -472,7 +479,8 @@ methods:
       content: >-
         function reduceRight(callbackfn: (previousValue: CertificateItem,
         currentValue: CertificateItem, currentIndex: number, array:
-        CertificateItem[]) => CertificateItem, initialValue: CertificateItem)
+        CertificateItem[]) => CertificateItem, initialValue: CertificateItem):
+        CertificateItem
       parameters:
         - id: callbackfn
           type: >-
@@ -484,8 +492,8 @@ methods:
           type: <xref uid="azure-keyvault.CertificateItem" />
           description: ''
       return:
-        type: <xref uid="azure-keyvault.CertificateItem" />
         description: ''
+        type: <xref uid="azure-keyvault.CertificateItem" />
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: CertificateItem,
       currentIndex: number, array: CertificateItem[]) => U, U)
@@ -503,7 +511,7 @@ methods:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
         CertificateItem, currentIndex: number, array: CertificateItem[]) => U,
-        initialValue: U)
+        initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -520,8 +528,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: reverse()
     uid: azure-keyvault.CertificateListResult.reverse
     package: azure-keyvault
@@ -530,10 +538,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function reverse()
+      content: 'function reverse(): CertificateItem[]'
       return:
-        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
   - name: shift()
     uid: azure-keyvault.CertificateListResult.shift
     package: azure-keyvault
@@ -542,10 +550,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function shift()
+      content: 'function shift(): CertificateItem | undefined'
       return:
-        type: <xref uid="azure-keyvault.CertificateItem" /> | undefined
         description: ''
+        type: <xref uid="azure-keyvault.CertificateItem" /> | undefined
   - name: 'slice(number, number)'
     uid: azure-keyvault.CertificateListResult.slice
     package: azure-keyvault
@@ -554,7 +562,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function slice(start?: number, end?: number)'
+      content: 'function slice(start?: number, end?: number): CertificateItem[]'
       parameters:
         - id: start
           type: number
@@ -564,8 +572,8 @@ methods:
           description: |
             The end of the specified portion of the array.
       return:
-        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
   - name: >-
       some((value: CertificateItem, index: number, array: CertificateItem[]) =>
       unknown, any)
@@ -580,7 +588,7 @@ methods:
     syntax:
       content: >-
         function some(callbackfn: (value: CertificateItem, index: number, array:
-        CertificateItem[]) => unknown, thisArg?: any)
+        CertificateItem[]) => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: >-
@@ -597,8 +605,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: 'sort((a: CertificateItem, b: CertificateItem) => number)'
     uid: azure-keyvault.CertificateListResult.sort
     package: azure-keyvault
@@ -609,7 +617,7 @@ methods:
     syntax:
       content: >-
         function sort(compareFn?: (a: CertificateItem, b: CertificateItem) =>
-        number)
+        number): this
       parameters:
         - id: compareFn
           type: '(a: CertificateItem, b: CertificateItem) =&gt; number'
@@ -618,8 +626,8 @@ methods:
             elements. If omitted, the elements are sorted in ascending, ASCII
             character order.
       return:
-        type: this
         description: ''
+        type: this
   - name: 'splice(number, number)'
     uid: azure-keyvault.CertificateListResult.splice
     package: azure-keyvault
@@ -630,7 +638,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount?: number)'
+      content: 'function splice(start: number, deleteCount?: number): CertificateItem[]'
       parameters:
         - id: start
           type: number
@@ -642,8 +650,8 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
   - name: 'splice(number, number, CertificateItem[])'
     uid: azure-keyvault.CertificateListResult.splice_1
     package: azure-keyvault
@@ -656,7 +664,7 @@ methods:
     syntax:
       content: >-
         function splice(start: number, deleteCount: number, items:
-        CertificateItem[])
+        CertificateItem[]): CertificateItem[]
       parameters:
         - id: start
           type: number
@@ -671,8 +679,8 @@ methods:
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.CertificateItem" />[]'
   - name: toLocaleString()
     uid: azure-keyvault.CertificateListResult.toLocaleString
     package: azure-keyvault
@@ -683,10 +691,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toLocaleString()
+      content: 'function toLocaleString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: toString()
     uid: azure-keyvault.CertificateListResult.toString
     package: azure-keyvault
@@ -695,10 +703,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toString()
+      content: 'function toString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: 'unshift(CertificateItem[])'
     uid: azure-keyvault.CertificateListResult.unshift
     package: azure-keyvault
@@ -707,13 +715,13 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function unshift(items: CertificateItem[])'
+      content: 'function unshift(items: CertificateItem[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-keyvault.CertificateItem" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
-        type: number
         description: ''
+        type: number
 extends: Array&lt;<xref uid="azure-keyvault.CertificateItem" />&gt;

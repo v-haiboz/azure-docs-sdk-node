@@ -22,8 +22,8 @@ properties:
     syntax:
       content: 'x-opt-enqueued-time?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
   - name: x-opt-offset
     uid: '@azure/event-hubs.EventHubMessageAnnotations.x-opt-offset'
     package: '@azure/event-hubs'
@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'x-opt-offset?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: x-opt-partition-key
     uid: '@azure/event-hubs.EventHubMessageAnnotations.x-opt-partition-key'
     package: '@azure/event-hubs'
@@ -50,8 +50,8 @@ properties:
     syntax:
       content: 'x-opt-partition-key?: string | null'
       return:
-        type: string | null
         description: ''
+        type: string | null
   - name: x-opt-sequence-number
     uid: '@azure/event-hubs.EventHubMessageAnnotations.x-opt-sequence-number'
     package: '@azure/event-hubs'
@@ -65,6 +65,6 @@ properties:
     syntax:
       content: 'x-opt-sequence-number?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
 extends: MessageAnnotations

@@ -60,8 +60,8 @@ properties:
     syntax:
       content: 'defaultClientRequestTimeoutInMs: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: defaultEnableReuseSocket
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.defaultEnableReuseSocket
@@ -74,8 +74,8 @@ properties:
     syntax:
       content: 'defaultEnableReuseSocket: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: defaultLocationMode
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.defaultLocationMode
@@ -88,11 +88,11 @@ properties:
     syntax:
       content: 'defaultLocationMode: LocationMode'
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.util.storageutilities.LocationMode"
           />
-        description: ''
   - name: defaultMaximumExecutionTimeInMs
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.defaultMaximumExecutionTimeInMs
@@ -107,8 +107,8 @@ properties:
     syntax:
       content: 'defaultMaximumExecutionTimeInMs: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: defaultTimeoutIntervalInMs
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.defaultTimeoutIntervalInMs
@@ -123,8 +123,8 @@ properties:
     syntax:
       content: 'defaultTimeoutIntervalInMs: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: enableGlobalHttpAgent
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.enableGlobalHttpAgent
@@ -141,8 +141,8 @@ properties:
     syntax:
       content: 'enableGlobalHttpAgent: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: host
     uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.host
     package: azure-storage
@@ -154,8 +154,8 @@ properties:
     syntax:
       content: 'host: StorageHost'
       return:
-        type: <xref uid="azure-storage.azurestorage.StorageHost" />
         description: ''
+        type: <xref uid="azure-storage.azurestorage.StorageHost" />
   - name: logger
     uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.logger
     package: azure-storage
@@ -167,10 +167,10 @@ properties:
     syntax:
       content: 'logger: Logger'
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.diagnostics.logger.Logger" />
-        description: ''
   - name: parallelOperationThreadCount
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.parallelOperationThreadCount
@@ -183,8 +183,8 @@ properties:
     syntax:
       content: 'parallelOperationThreadCount: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: proxy
     uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.proxy
     package: azure-storage
@@ -196,11 +196,11 @@ properties:
     syntax:
       content: 'proxy: Proxy'
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.services.storageserviceclient.Proxy"
           />
-        description: ''
   - name: singleBlobPutThresholdInBytes
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.singleBlobPutThresholdInBytes
@@ -213,8 +213,8 @@ properties:
     syntax:
       content: 'singleBlobPutThresholdInBytes: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: SpeedSummary
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.SpeedSummary
@@ -227,11 +227,11 @@ properties:
     syntax:
       content: 'static SpeedSummary: SpeedSummary'
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: useNagleAlgorithm
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.useNagleAlgorithm
@@ -248,8 +248,8 @@ properties:
     syntax:
       content: 'useNagleAlgorithm: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
 methods:
   - name: 'abortCopyBlob(string, string, string, BlobRequestOptions, ErrorOrResponse)'
     uid: >-
@@ -574,7 +574,7 @@ methods:
       content: >-
         function appendFromBrowserFile(container: string, blob: string,
         browserFile: Object, options: CreateBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -602,11 +602,11 @@ methods:
                                                                                       the blob information.
                                                                                       `response` will contain information related to this operation.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: 'appendFromBrowserFile(string, string, Object, ErrorOrResult<BlobResult>)'
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.appendFromBrowserFile_1
@@ -618,7 +618,7 @@ methods:
     syntax:
       content: >-
         function appendFromBrowserFile(container: string, blob: string,
-        browserFile: Object, callback: ErrorOrResult<BlobResult>)
+        browserFile: Object, callback: ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -636,11 +636,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       appendFromLocalFile(string, string, string, CreateBlobRequestOptions,
       ErrorOrResult<BlobResult>)
@@ -665,7 +665,7 @@ methods:
       content: >-
         function appendFromLocalFile(container: string, blob: string,
         localFileName: string, options: CreateBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -689,11 +689,11 @@ methods:
             />&gt;
           description: The callback function.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: 'appendFromLocalFile(string, string, string, ErrorOrResult<BlobResult>)'
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.appendFromLocalFile_1
@@ -705,7 +705,8 @@ methods:
     syntax:
       content: >-
         function appendFromLocalFile(container: string, blob: string,
-        localFileName: string, callback: ErrorOrResult<BlobResult>)
+        localFileName: string, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -723,11 +724,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       appendFromStream(string, string, stream.Readable, number,
       CreateBlobRequestOptions, ErrorOrResult<BlobResult>)
@@ -752,7 +753,8 @@ methods:
       content: >-
         function appendFromStream(container: string, blob: string, stream:
         stream.Readable, streamLength: number, options:
-        CreateBlobRequestOptions, callback: ErrorOrResult<BlobResult>)
+        CreateBlobRequestOptions, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -779,11 +781,11 @@ methods:
             />&gt;
           description: The callback function.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       appendFromStream(string, string, stream.Readable, number,
       ErrorOrResult<BlobResult>)
@@ -798,7 +800,7 @@ methods:
       content: >-
         function appendFromStream(container: string, blob: string, stream:
         stream.Readable, streamLength: number, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -819,11 +821,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       appendFromText(string, string, string, CreateBlobRequestOptions,
       ErrorOrResult<BlobResult>)
@@ -1141,7 +1143,7 @@ methods:
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.commitBlocks
     package: azure-storage
-    summary: >-
+    summary: >+
       Writes a blob by specifying the list of block IDs that make up the blob.
 
       In order to be written as part of a blob, a block must have been
@@ -1154,6 +1156,26 @@ methods:
 
       i.e. existing blocks in the blob will be removed, this behavior is kept
       for backward compatibility consideration.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      blobService.createBlockFromText("sampleBlockName", containerName,
+      blobName, "sampleBlockContent", function(error) {
+        assert.equal(error, null);
+        // In this example, LatestBlocks is used, we hope the Blob service first search
+        // the uncommitted block list, and then the committed block list for the named block "sampleBlockName",
+        // and thus make sure the block is with latest content.
+        blobService.commitBlocks(containerName, blobName, { LatestBlocks: ["sampleBlockName"] }, function(error) {
+          assert.equal(error, null);
+        });
+      });
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -1260,7 +1282,7 @@ methods:
       content: >-
         function createAppendBlobFromBrowserFile(container: string, blob:
         string, browserFile: Object, options: CreateBlobRequestOptions,
-        callback: ErrorOrResult<BlobResult>)
+        callback: ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1288,11 +1310,11 @@ methods:
                                                                                       the blob information.
                                                                                       `response` will contain information related to this operation.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createAppendBlobFromBrowserFile(string, string, Object,
       ErrorOrResult<BlobResult>)
@@ -1306,7 +1328,8 @@ methods:
     syntax:
       content: >-
         function createAppendBlobFromBrowserFile(container: string, blob:
-        string, browserFile: Object, callback: ErrorOrResult<BlobResult>)
+        string, browserFile: Object, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1324,11 +1347,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createAppendBlobFromLocalFile(string, string, string,
       CreateBlobRequestOptions, ErrorOrResult<BlobResult>)
@@ -1359,7 +1382,7 @@ methods:
       content: >-
         function createAppendBlobFromLocalFile(container: string, blob: string,
         localFileName: string, options: CreateBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1383,11 +1406,11 @@ methods:
             />&gt;
           description: The callback function.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createAppendBlobFromLocalFile(string, string, string,
       ErrorOrResult<BlobResult>)
@@ -1401,7 +1424,8 @@ methods:
     syntax:
       content: >-
         function createAppendBlobFromLocalFile(container: string, blob: string,
-        localFileName: string, callback: ErrorOrResult<BlobResult>)
+        localFileName: string, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1419,11 +1443,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createAppendBlobFromStream(string, string, stream.Readable, number,
       CreateBlobRequestOptions, ErrorOrResult<BlobResult>)
@@ -1454,7 +1478,8 @@ methods:
       content: >-
         function createAppendBlobFromStream(container: string, blob: string,
         stream: stream.Readable, streamLength: number, options:
-        CreateBlobRequestOptions, callback: ErrorOrResult<BlobResult>)
+        CreateBlobRequestOptions, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1481,11 +1506,11 @@ methods:
             />&gt;
           description: The callback function.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createAppendBlobFromStream(string, string, stream.Readable, number,
       ErrorOrResult<BlobResult>)
@@ -1500,7 +1525,7 @@ methods:
       content: >-
         function createAppendBlobFromStream(container: string, blob: string,
         stream: stream.Readable, streamLength: number, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1521,11 +1546,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createAppendBlobFromText(string, string, string | Buffer,
       CreateBlobRequestOptions, ErrorOrResult<BlobResult>)
@@ -1694,7 +1719,7 @@ methods:
       content: >-
         function createBlockBlobFromBrowserFile(container: string, blob: string,
         browserFile: Object, options: CreateBlockBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1722,11 +1747,11 @@ methods:
                                                                                       the blob information.
                                                                                       `response` will contain information related to this operation.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createBlockBlobFromBrowserFile(string, string, Object,
       ErrorOrResult<BlobResult>)
@@ -1740,7 +1765,7 @@ methods:
     syntax:
       content: >-
         function createBlockBlobFromBrowserFile(container: string, blob: string,
-        browserFile: Object, callback: ErrorOrResult<BlobResult>)
+        browserFile: Object, callback: ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1758,11 +1783,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createBlockBlobFromLocalFile(string, string, string,
       CreateBlockBlobRequestOptions, ErrorOrResult<BlobResult>)
@@ -1790,7 +1815,7 @@ methods:
       content: >-
         function createBlockBlobFromLocalFile(container: string, blob: string,
         localFileName: string, options: CreateBlockBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1818,11 +1843,11 @@ methods:
                                                                                         the blob information.
                                                                                         `response` will contain information related to this operation.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createBlockBlobFromLocalFile(string, string, string,
       ErrorOrResult<BlobResult>)
@@ -1836,7 +1861,8 @@ methods:
     syntax:
       content: >-
         function createBlockBlobFromLocalFile(container: string, blob: string,
-        localFileName: string, callback: ErrorOrResult<BlobResult>)
+        localFileName: string, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1854,11 +1880,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createBlockBlobFromStream(string, string, stream.Readable, number,
       CreateBlockBlobRequestOptions, ErrorOrResult<BlobResult>)
@@ -1873,7 +1899,8 @@ methods:
       content: >-
         function createBlockBlobFromStream(container: string, blob: string,
         stream: stream.Readable, streamLength: number, options:
-        CreateBlockBlobRequestOptions, callback: ErrorOrResult<BlobResult>)
+        CreateBlockBlobRequestOptions, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1900,11 +1927,11 @@ methods:
             />&gt;
           description: The callback function.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createBlockBlobFromStream(string, string, stream.Readable, number,
       ErrorOrResult<BlobResult>)
@@ -1919,7 +1946,7 @@ methods:
       content: >-
         function createBlockBlobFromStream(container: string, blob: string,
         stream: stream.Readable, streamLength: number, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -1940,11 +1967,11 @@ methods:
             />&gt;
           description: The callback function.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createBlockBlobFromText(string, string, string | Buffer,
       CreateBlobRequestOptions, ErrorOrResult<BlobResult>)
@@ -2324,9 +2351,25 @@ methods:
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createContainerIfNotExists_1
     package: azure-storage
-    summary: >-
+    summary: >+
       Creates a new container under the specified account if the container does
       not exists.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      blobService.createContainerIfNotExists('taskcontainer', {publicAccessLevel
+      : 'blob'}, function(error) {
+        if(!error) {
+          // Container created or exists, and is public
+        }
+      });
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -2359,9 +2402,25 @@ methods:
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createContainerIfNotExists
     package: azure-storage
-    summary: >-
+    summary: >+
       Creates a new container under the specified account if the container does
       not exists.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      blobService.createContainerIfNotExists('taskcontainer', {publicAccessLevel
+      : 'blob'}, function(error) {
+        if(!error) {
+          // Container created or exists, and is public
+        }
+      });
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -2523,7 +2582,7 @@ methods:
       content: >-
         function createPageBlobFromBrowserFile(container: string, blob: string,
         browserFile: Object, options: CreatePageBlobOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -2551,11 +2610,11 @@ methods:
                                                                                             the blob information.
                                                                                             `response` will contain information related to this operation.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createPageBlobFromBrowserFile(string, string, Object,
       ErrorOrResult<BlobResult>)
@@ -2569,7 +2628,7 @@ methods:
     syntax:
       content: >-
         function createPageBlobFromBrowserFile(container: string, blob: string,
-        browserFile: Object, callback: ErrorOrResult<BlobResult>)
+        browserFile: Object, callback: ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -2587,11 +2646,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createPageBlobFromLocalFile(string, string, string, CreatePageBlobOptions,
       ErrorOrResult<BlobResult>)
@@ -2606,7 +2665,7 @@ methods:
       content: >-
         function createPageBlobFromLocalFile(container: string, blob: string,
         localFileName: string, options: CreatePageBlobOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -2630,11 +2689,11 @@ methods:
             />&gt;
           description: The callback function.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createPageBlobFromLocalFile(string, string, string,
       ErrorOrResult<BlobResult>)
@@ -2648,7 +2707,8 @@ methods:
     syntax:
       content: >-
         function createPageBlobFromLocalFile(container: string, blob: string,
-        localFileName: string, callback: ErrorOrResult<BlobResult>)
+        localFileName: string, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -2666,11 +2726,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createPageBlobFromStream(string, string, stream.Readable, number,
       CreatePageBlobOptions, ErrorOrResult<BlobResult>)
@@ -2685,7 +2745,8 @@ methods:
       content: >-
         function createPageBlobFromStream(container: string, blob: string,
         stream: stream.Readable, streamLength: number, options:
-        CreatePageBlobOptions, callback: ErrorOrResult<BlobResult>)
+        CreatePageBlobOptions, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -2712,11 +2773,11 @@ methods:
             />&gt;
           description: The callback function.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createPageBlobFromStream(string, string, stream.Readable, number,
       ErrorOrResult<BlobResult>)
@@ -2731,7 +2792,7 @@ methods:
       content: >-
         function createPageBlobFromStream(container: string, blob: string,
         stream: stream.Readable, streamLength: number, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -2752,11 +2813,11 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       createPagesFromStream(string, string, stream.Readable, number, number,
       BlobRequestOptions, ErrorOrResult<BlobResult>)
@@ -2852,7 +2913,7 @@ methods:
     syntax:
       content: >-
         function createReadStream(container: string, blob: string, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): stream.Readable
       parameters:
         - id: container
           type: string
@@ -2867,22 +2928,32 @@ methods:
             />&gt;
           description: ''
       return:
-        type: <xref uid="stream.Readable" />
         description: ''
+        type: <xref uid="stream.Readable" />
   - name: >-
       createReadStream(string, string, GetBlobRequestOptions,
       ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createReadStream
     package: azure-storage
-    summary: Provides a stream to read from a blob.
+    summary: |+
+      Provides a stream to read from a blob.
+
+      **Example**
+
+      var azure = require('azure-storage');
+      var blobService = azure.createBlobService();
+      var writable = fs.createWriteStream(destinationFileNameTarget);
+       blobService.createReadStream(containerName, blobName).pipe(writable);
+
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function createReadStream(container: string, blob: string, options:
-        GetBlobRequestOptions, callback: ErrorOrResult<BlobResult>)
+        GetBlobRequestOptions, callback: ErrorOrResult<BlobResult>):
+        stream.Readable
       parameters:
         - id: container
           type: string
@@ -2906,17 +2977,31 @@ methods:
                                                                                     otherwise `result` will contain the blob information.
                                                                                     `response` will contain information related to this operation.
       return:
-        type: <xref uid="stream.Readable" />
         description: A Node.js Readable stream.
+        type: <xref uid="stream.Readable" />
   - name: >-
       createWriteStreamToBlockBlob(string, string,
       CreateBlockBlobRequestOptions, ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createWriteStreamToBlockBlob
     package: azure-storage
-    summary: |-
+    summary: >+
       Provides a stream to write to a block blob.
+
       Please note the `Stream` returned by this API should be used with piping.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      var stream =
+      fs.createReadStream(fileNameTarget).pipe(blobService.createWriteStreamToBlockBlob(containerName,
+      blobName, { blockIdPrefix: 'block' }));
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -2924,7 +3009,7 @@ methods:
       content: >-
         function createWriteStreamToBlockBlob(container: string, blob: string,
         options: CreateBlockBlobRequestOptions, callback?:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -2949,8 +3034,8 @@ methods:
                                                                                         information about the blob.
                                                                                         `response` will contain information related to this operation.
       return:
-        type: <xref uid="stream.Writable" />
         description: A Node.js Writable stream.
+        type: <xref uid="stream.Writable" />
   - name: 'createWriteStreamToBlockBlob(string, string, ErrorOrResult<BlobResult>)'
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createWriteStreamToBlockBlob_1
@@ -2962,7 +3047,7 @@ methods:
     syntax:
       content: >-
         function createWriteStreamToBlockBlob(container: string, blob: string,
-        callback?: ErrorOrResult<BlobResult>)
+        callback?: ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -2977,15 +3062,15 @@ methods:
             />&gt;
           description: ''
       return:
-        type: <xref uid="stream.Writable" />
         description: ''
+        type: <xref uid="stream.Writable" />
   - name: >-
       createWriteStreamToExistingAppendBlob(string, string,
       CreateBlobRequestOptions, ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createWriteStreamToExistingAppendBlob
     package: azure-storage
-    summary: >-
+    summary: >+
       Provides a stream to write to an existing append blob. Assumes that the
       blob exists.
 
@@ -3001,6 +3086,19 @@ methods:
       true is acceptable for you.
 
       Please note the `Stream` returned by this API should be used with piping.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      var stream =
+      fs.createReadStream(fileNameTarget).pipe(blobService.createWriteStreamToAppendBlob(containerName,
+      blobName));
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -3008,7 +3106,7 @@ methods:
       content: >-
         function createWriteStreamToExistingAppendBlob(container: string, blob:
         string, options: CreateBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -3033,8 +3131,8 @@ methods:
                                                                                       information about the blob.
                                                                                       `response` will contain information related to this operation.
       return:
-        type: <xref uid="stream.Writable" />
         description: A Node.js Writable stream.
+        type: <xref uid="stream.Writable" />
   - name: >-
       createWriteStreamToExistingAppendBlob(string, string,
       ErrorOrResult<BlobResult>)
@@ -3048,7 +3146,7 @@ methods:
     syntax:
       content: >-
         function createWriteStreamToExistingAppendBlob(container: string, blob:
-        string, callback: ErrorOrResult<BlobResult>)
+        string, callback: ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -3063,21 +3161,35 @@ methods:
             />&gt;
           description: ''
       return:
-        type: <xref uid="stream.Writable" />
         description: ''
+        type: <xref uid="stream.Writable" />
   - name: >-
       createWriteStreamToExistingPageBlob(string, string, CreatePageBlobOptions,
       ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createWriteStreamToExistingPageBlob
     package: azure-storage
-    summary: >-
+    summary: >+
       Provides a stream to write to a page blob. Assumes that the blob exists.
 
       If it does not, please create the blob using createPageBlob before calling
       this method or use createWriteStreamNewPageBlob.
 
       Please note the `Stream` returned by this API should be used with piping.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      blobService.createPageBlob(containerName, blobName, 1024, function (err) {
+        // Pipe file to a blob
+        var stream = fs.createReadStream(fileNameTarget).pipe(blobService.createWriteStreamToExistingPageBlob(containerName, blobName));
+      });
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -3085,7 +3197,7 @@ methods:
       content: >-
         function createWriteStreamToExistingPageBlob(container: string, blob:
         string, options: CreatePageBlobOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -3110,8 +3222,8 @@ methods:
                                                                                         the blob information.
                                                                                         `response` will contain information related to this operation.
       return:
-        type: <xref uid="stream.Writable" />
         description: A Node.js Writable stream.
+        type: <xref uid="stream.Writable" />
   - name: >-
       createWriteStreamToExistingPageBlob(string, string,
       ErrorOrResult<BlobResult>)
@@ -3125,7 +3237,7 @@ methods:
     syntax:
       content: >-
         function createWriteStreamToExistingPageBlob(container: string, blob:
-        string, callback: ErrorOrResult<BlobResult>)
+        string, callback: ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -3140,15 +3252,15 @@ methods:
             />&gt;
           description: ''
       return:
-        type: <xref uid="stream.Writable" />
         description: ''
+        type: <xref uid="stream.Writable" />
   - name: >-
       createWriteStreamToNewAppendBlob(string, string, CreateBlobRequestOptions,
       ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createWriteStreamToNewAppendBlob
     package: azure-storage
-    summary: >-
+    summary: >+
       Provides a stream to write to a new append blob. If the blob already
       exists on the service, it will be overwritten.
 
@@ -3164,6 +3276,19 @@ methods:
       true is acceptable for you.
 
       Please note the `Stream` returned by this API should be used with piping.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      var stream =
+      fs.createReadStream(fileNameTarget).pipe(blobService.createWriteStreamToAppendBlob(containerName,
+      blobName));
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -3171,7 +3296,7 @@ methods:
       content: >-
         function createWriteStreamToNewAppendBlob(container: string, blob:
         string, options: CreateBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -3196,8 +3321,8 @@ methods:
                                                                                       information about the blob.
                                                                                       `response` will contain information related to this operation.
       return:
-        type: <xref uid="stream.Writable" />
         description: A Node.js Writable stream.
+        type: <xref uid="stream.Writable" />
   - name: >-
       createWriteStreamToNewAppendBlob(string, string,
       ErrorOrResult<BlobResult>)
@@ -3211,7 +3336,7 @@ methods:
     syntax:
       content: >-
         function createWriteStreamToNewAppendBlob(container: string, blob:
-        string, callback: ErrorOrResult<BlobResult>)
+        string, callback: ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -3226,19 +3351,33 @@ methods:
             />&gt;
           description: ''
       return:
-        type: <xref uid="stream.Writable" />
         description: ''
+        type: <xref uid="stream.Writable" />
   - name: >-
       createWriteStreamToNewPageBlob(string, string, number,
       CreatePageBlobOptions, ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.createWriteStreamToNewPageBlob
     package: azure-storage
-    summary: >-
+    summary: >+
       Provides a stream to write to a page blob. Creates the blob before writing
       data.
 
       Please note the `Stream` returned by this API should be used with piping.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      blobService.createPageBlob(containerName, blobName, 1024, function (err) {
+        // Pipe file to a blob
+        var stream = fs.createReadStream(fileNameTarget).pipe(blobService.createWriteStreamToNewPageBlob(containerName, blobName));
+      });
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -3246,7 +3385,7 @@ methods:
       content: >-
         function createWriteStreamToNewPageBlob(container: string, blob: string,
         length: number, options: CreatePageBlobOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -3274,8 +3413,8 @@ methods:
                                                                                         the blob information.
                                                                                         `response` will contain information related to this operation.
       return:
-        type: <xref uid="stream.Writable" />
         description: A Node.js Writable stream.
+        type: <xref uid="stream.Writable" />
   - name: >-
       createWriteStreamToNewPageBlob(string, string, number,
       ErrorOrResult<BlobResult>)
@@ -3289,7 +3428,7 @@ methods:
     syntax:
       content: >-
         function createWriteStreamToNewPageBlob(container: string, blob: string,
-        length: number, callback: ErrorOrResult<BlobResult>)
+        length: number, callback: ErrorOrResult<BlobResult>): stream.Writable
       parameters:
         - id: container
           type: string
@@ -3307,8 +3446,8 @@ methods:
             />&gt;
           description: ''
       return:
-        type: <xref uid="stream.Writable" />
         description: ''
+        type: <xref uid="stream.Writable" />
   - name: 'deleteBlob(string, string, DeleteBlobRequestOptions, ErrorOrResponse)'
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.deleteBlob_1
@@ -3741,10 +3880,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function generateBlockIdPrefix()
+      content: 'function generateBlockIdPrefix(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: >-
       generateSharedAccessSignature(string, string, SharedAccessPolicy,
       ContentSettingsHeaders)
@@ -3759,7 +3898,7 @@ methods:
       content: >-
         function generateSharedAccessSignature(container: string, blob: string,
         sharedAccessPolicy: SharedAccessPolicy, headers?:
-        ContentSettingsHeaders)
+        ContentSettingsHeaders): string
       parameters:
         - id: container
           type: string
@@ -3776,10 +3915,10 @@ methods:
             />
           description: ''
       return:
-        type: string
         description: >-
           The shared access signature. Note this does not contain the leading
           "?".
+        type: string
   - name: >-
       generateSharedAccessSignatureWithVersion(string, string,
       SharedAccessPolicy, string, ContentSettingsHeaders)
@@ -3794,7 +3933,7 @@ methods:
       content: >-
         function generateSharedAccessSignatureWithVersion(container: string,
         blob: string, sharedAccessPolicy: SharedAccessPolicy, sasVersion:
-        string, headers?: ContentSettingsHeaders)
+        string, headers?: ContentSettingsHeaders): string
       parameters:
         - id: container
           type: string
@@ -3814,10 +3953,10 @@ methods:
             />
           description: ''
       return:
-        type: string
         description: >-
           The shared access signature query string. Note this string does not
           contain the leading "?".
+        type: string
   - name: 'getAccountProperties(string, string, ErrorOrResult<AccountProperties>)'
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.getAccountProperties_1
@@ -4026,7 +4165,8 @@ methods:
     syntax:
       content: >-
         function getBlobToLocalFile(container: string, blob: string,
-        localFileName: string, callback: ErrorOrResult<BlobResult>)
+        localFileName: string, callback: ErrorOrResult<BlobResult>):
+        SpeedSummary
       parameters:
         - id: container
           type: string
@@ -4044,18 +4184,34 @@ methods:
             />&gt;
           description: ''
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       getBlobToLocalFile(string, string, string, GetBlobRequestOptions,
       ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.getBlobToLocalFile
     package: azure-storage
-    summary: Downloads a blob into a file.
+    summary: >+
+      Downloads a blob into a file.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      blobService.getBlobToLocalFile('taskcontainer', 'task1',
+      'task1-download.txt', function(error, serverBlob) {
+        if(!error) {
+          // Blob available in serverBlob.blob variable
+        }
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -4063,7 +4219,7 @@ methods:
       content: >-
         function getBlobToLocalFile(container: string, blob: string,
         localFileName: string, options: GetBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -4090,25 +4246,42 @@ methods:
                                                                                     otherwise `result` will contain the blob information.
                                                                                     `response` will contain information related to this operation.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       getBlobToStream(string, string, stream.Writable,
       ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.getBlobToStream
     package: azure-storage
-    summary: Downloads a blob into a stream.
+    summary: >+
+      Downloads a blob into a stream.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      blobService.getBlobToStream('taskcontainer', 'task1',
+      fs.createWriteStream('task1-download.txt'), function(error, serverBlob) {
+        if(!error) {
+          // Blob available in serverBlob.blob variable
+        }
+      });
+
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getBlobToStream(container: string, blob: string, writeStream:
-        stream.Writable, callback: ErrorOrResult<BlobResult>)
+        stream.Writable, callback: ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -4129,18 +4302,35 @@ methods:
                                                                                     otherwise `result` will contain the blob information.
                                                                                     `response` will contain information related to this operation.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: >-
       getBlobToStream(string, string, stream.Writable, GetBlobRequestOptions,
       ErrorOrResult<BlobResult>)
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.getBlobToStream_1
     package: azure-storage
-    summary: Downloads a blob into a stream.
+    summary: >+
+      Downloads a blob into a stream.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      blobService.getBlobToStream('taskcontainer', 'task1',
+      fs.createWriteStream('task1-download.txt'), function(error, serverBlob) {
+        if(!error) {
+          // Blob available in serverBlob.blob variable
+        }
+      });
+
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -4148,7 +4338,7 @@ methods:
       content: >-
         function getBlobToStream(container: string, blob: string, writeStream:
         stream.Writable, options: GetBlobRequestOptions, callback:
-        ErrorOrResult<BlobResult>)
+        ErrorOrResult<BlobResult>): SpeedSummary
       parameters:
         - id: container
           type: string
@@ -4175,11 +4365,11 @@ methods:
                                                                                     otherwise `result` will contain the blob information.
                                                                                     `response` will contain information related to this operation.
       return:
+        description: ''
         type: >-
           <xref
           uid="azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary"
           />
-        description: ''
   - name: 'getBlobToText(string, string, BlobToText)'
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.getBlobToText_1
@@ -4250,7 +4440,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getBlockId(prefix: string, number: number | string)'
+      content: 'function getBlockId(prefix: string, number: number | string): string'
       parameters:
         - id: prefix
           type: string
@@ -4259,8 +4449,8 @@ methods:
           type: number | string
           description: ''
       return:
-        type: string
         description: ''
+        type: string
   - name: >-
       getContainerAcl(string, ContainerOptions,
       ErrorOrResult<ContainerAclResult>)
@@ -4593,14 +4783,31 @@ methods:
   - name: 'getUrl(string, string, string, boolean, string)'
     uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.getUrl
     package: azure-storage
-    summary: Retrieves a blob or container URL.
+    summary: >+
+      Retrieves a blob or container URL.
+
+
+      **Example**
+
+
+      var azure = require('azure-storage');
+
+      var blobService = azure.createBlobService();
+
+      //create a SAS that expires in an hour
+
+      var sasToken = blobService.generateSharedAccessSignature(containerName,
+      blobName, { AccessPolicy: { Expiry: azure.date.minutesFromNow(60); } });
+
+      var sasUrl = blobService.getUrl(containerName, blobName, sasToken, true);
+
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function getUrl(container: string, blob?: string, sasToken?: string,
-        primary?: boolean, snapshotId?: string)
+        primary?: boolean, snapshotId?: string): string
       parameters:
         - id: container
           type: string
@@ -4618,8 +4825,8 @@ methods:
           type: string
           description: ''
       return:
-        type: string
         description: The formatted URL string.
+        type: string
   - name: >-
       listBlobDirectoriesSegmented(string, ContinuationToken,
       ErrorOrResult<ListBlobDirectoriesResult>)
@@ -6141,17 +6348,17 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function withFilter(newFilter: IFilter)'
+      content: 'function withFilter(newFilter: IFilter): BlobService'
       parameters:
         - id: newFilter
           type: <xref uid="azure-storage.azurestorage.common.filters.IFilter" />
           description: ''
       return:
+        description: A new service client with the filter applied.
         type: >-
           <xref
           uid="azure-storage.azurestorage.services.blob.blobservice.BlobService"
           />
-        description: A new service client with the filter applied.
 extends: >-
   <xref
   uid="azure-storage.azurestorage.common.services.storageserviceclient.StorageServiceClient"

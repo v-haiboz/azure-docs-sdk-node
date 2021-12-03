@@ -45,8 +45,8 @@ properties:
     syntax:
       content: 'connectionId?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: eventhubName
     uid: '@azure/event-hubs.EventHubClient.eventhubName'
     package: '@azure/event-hubs'
@@ -58,8 +58,8 @@ properties:
     syntax:
       content: 'eventhubName: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: close()
     uid: '@azure/event-hubs.EventHubClient.close'
@@ -71,10 +71,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function close()
+      content: 'function close(): Promise<void>'
       return:
-        type: Promise&lt;void&gt;
         description: Promise<void>
+        type: Promise&lt;void&gt;
   - name: >-
       createFromAadTokenCredentials(string, string, ApplicationTokenCredentials
       | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials,
@@ -90,7 +90,7 @@ methods:
         static function createFromAadTokenCredentials(host: string, entityPath:
         string, credentials: ApplicationTokenCredentials | UserTokenCredentials
         | DeviceTokenCredentials | MSITokenCredentials, options?:
-        ClientOptionsBase)
+        ClientOptionsBase): EventHubClient
       parameters:
         - id: host
           type: string
@@ -113,8 +113,8 @@ methods:
           type: <xref uid="@azure/event-hubs.ClientOptionsBase" />
           description: The options that can be provided during client creation.
       return:
-        type: <xref uid="@azure/event-hubs.EventHubClient" />
         description: An instance of the Eventhub client.
+        type: <xref uid="@azure/event-hubs.EventHubClient" />
   - name: 'createFromConnectionString(string, undefined | string, ClientOptions)'
     uid: '@azure/event-hubs.EventHubClient.createFromConnectionString'
     package: '@azure/event-hubs'
@@ -125,7 +125,7 @@ methods:
     syntax:
       content: >-
         static function createFromConnectionString(connectionString: string,
-        path?: undefined | string, options?: ClientOptions)
+        path?: undefined | string, options?: ClientOptions): EventHubClient
       parameters:
         - id: connectionString
           type: string
@@ -139,8 +139,8 @@ methods:
           type: <xref uid="@azure/event-hubs.ClientOptions" />
           description: ''
       return:
-        type: <xref uid="@azure/event-hubs.EventHubClient" />
         description: '- An instance of the eventhub client.'
+        type: <xref uid="@azure/event-hubs.EventHubClient" />
   - name: 'createFromIotHubConnectionString(string, ClientOptions)'
     uid: '@azure/event-hubs.EventHubClient.createFromIotHubConnectionString'
     package: '@azure/event-hubs'
@@ -151,7 +151,7 @@ methods:
     syntax:
       content: >-
         static function createFromIotHubConnectionString(iothubConnectionString:
-        string, options?: ClientOptions)
+        string, options?: ClientOptions): Promise<EventHubClient>
       parameters:
         - id: iothubConnectionString
           type: string
@@ -162,8 +162,8 @@ methods:
           type: <xref uid="@azure/event-hubs.ClientOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/event-hubs.EventHubClient" />&gt;
         description: '- Promise<EventHubClient>.'
+        type: Promise&lt;<xref uid="@azure/event-hubs.EventHubClient" />&gt;
   - name: 'createFromTokenProvider(string, string, TokenProvider, ClientOptionsBase)'
     uid: '@azure/event-hubs.EventHubClient.createFromTokenProvider'
     package: '@azure/event-hubs'
@@ -174,7 +174,8 @@ methods:
     syntax:
       content: >-
         static function createFromTokenProvider(host: string, entityPath:
-        string, tokenProvider: TokenProvider, options?: ClientOptionsBase)
+        string, tokenProvider: TokenProvider, options?: ClientOptionsBase):
+        EventHubClient
       parameters:
         - id: host
           type: string
@@ -191,8 +192,8 @@ methods:
           type: <xref uid="@azure/event-hubs.ClientOptionsBase" />
           description: The options that can be provided during client creation.
       return:
-        type: <xref uid="@azure/event-hubs.EventHubClient" />
         description: An instance of the Eventhub client.
+        type: <xref uid="@azure/event-hubs.EventHubClient" />
   - name: getHubRuntimeInformation()
     uid: '@azure/event-hubs.EventHubClient.getHubRuntimeInformation'
     package: '@azure/event-hubs'
@@ -201,12 +202,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getHubRuntimeInformation()
+      content: 'function getHubRuntimeInformation(): Promise<EventHubRuntimeInformation>'
       return:
+        description: A promise that resolves with EventHubRuntimeInformation.
         type: >-
           Promise&lt;<xref uid="@azure/event-hubs.EventHubRuntimeInformation"
           />&gt;
-        description: A promise that resolves with EventHubRuntimeInformation.
   - name: getPartitionIds()
     uid: '@azure/event-hubs.EventHubClient.getPartitionIds'
     package: '@azure/event-hubs'
@@ -215,10 +216,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getPartitionIds()
+      content: 'function getPartitionIds(): Promise<Array<string>>'
       return:
-        type: Promise&lt;Array&lt;string&gt;&gt;
         description: A promise that resolves with an Array of strings.
+        type: Promise&lt;Array&lt;string&gt;&gt;
   - name: getPartitionInformation(string | number)
     uid: '@azure/event-hubs.EventHubClient.getPartitionInformation'
     package: '@azure/event-hubs'
@@ -227,16 +228,18 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getPartitionInformation(partitionId: string | number)'
+      content: >-
+        function getPartitionInformation(partitionId: string | number):
+        Promise<EventHubPartitionRuntimeInformation>
       parameters:
         - id: partitionId
           type: string | number
           description: Partition ID for which partition information is required.
       return:
+        description: A promise that resoloves with EventHubPartitionRuntimeInformation.
         type: >-
           Promise&lt;<xref
           uid="@azure/event-hubs.EventHubPartitionRuntimeInformation" />&gt;
-        description: A promise that resoloves with EventHubPartitionRuntimeInformation.
   - name: 'receive(string | number, OnMessage, OnError, ReceiveOptions)'
     uid: '@azure/event-hubs.EventHubClient.receive'
     package: '@azure/event-hubs'
@@ -252,7 +255,7 @@ methods:
     syntax:
       content: >-
         function receive(partitionId: string | number, onMessage: OnMessage,
-        onError: OnError, options?: ReceiveOptions)
+        onError: OnError, options?: ReceiveOptions): ReceiveHandler
       parameters:
         - id: partitionId
           type: string | number
@@ -269,10 +272,10 @@ methods:
           type: <xref uid="@azure/event-hubs.ReceiveOptions" />
           description: ''
       return:
-        type: <xref uid="@azure/event-hubs.ReceiveHandler" />
         description: >-
           ReceiveHandler - An object that provides a mechanism to stop receiving
           more messages.
+        type: <xref uid="@azure/event-hubs.ReceiveHandler" />
   - name: 'receiveBatch(string | number, number, undefined | number, ReceiveOptions)'
     uid: '@azure/event-hubs.EventHubClient.receiveBatch'
     package: '@azure/event-hubs'
@@ -289,7 +292,7 @@ methods:
       content: >-
         function receiveBatch(partitionId: string | number, maxMessageCount:
         number, maxWaitTimeInSeconds?: undefined | number, options?:
-        ReceiveOptions)
+        ReceiveOptions): Promise<EventData[]>
       parameters:
         - id: partitionId
           type: string | number
@@ -304,8 +307,8 @@ methods:
           type: <xref uid="@azure/event-hubs.ReceiveOptions" />
           description: ''
       return:
-        type: 'Promise&lt;<xref uid="@azure/event-hubs.EventData" />[]&gt;'
         description: Promise<Array<EventData>>.
+        type: 'Promise&lt;<xref uid="@azure/event-hubs.EventData" />[]&gt;'
   - name: 'send(EventData, string | number)'
     uid: '@azure/event-hubs.EventHubClient.send'
     package: '@azure/event-hubs'
@@ -314,7 +317,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function send(data: EventData, partitionId?: string | number)'
+      content: >-
+        function send(data: EventData, partitionId?: string | number):
+        Promise<Delivery>
       parameters:
         - id: data
           type: <xref uid="@azure/event-hubs.EventData" />
@@ -323,8 +328,8 @@ methods:
           type: string | number
           description: ''
       return:
-        type: Promise&lt;Delivery&gt;
         description: Promise<Delivery>
+        type: Promise&lt;Delivery&gt;
   - name: 'sendBatch(EventData[], string | number)'
     uid: '@azure/event-hubs.EventHubClient.sendBatch'
     package: '@azure/event-hubs'
@@ -337,7 +342,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function sendBatch(datas: EventData[], partitionId?: string | number)'
+      content: >-
+        function sendBatch(datas: EventData[], partitionId?: string | number):
+        Promise<Delivery>
       parameters:
         - id: datas
           type: '<xref uid="@azure/event-hubs.EventData" />[]'
@@ -346,5 +353,5 @@ methods:
           type: string | number
           description: ''
       return:
-        type: Promise&lt;Delivery&gt;
         description: Promise<Delivery>
+        type: Promise&lt;Delivery&gt;

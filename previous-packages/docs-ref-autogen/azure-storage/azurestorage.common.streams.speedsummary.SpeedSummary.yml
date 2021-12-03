@@ -21,8 +21,8 @@ properties:
     syntax:
       content: 'completeSize: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: name
     uid: azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.name
     package: azure-storage
@@ -34,8 +34,8 @@ properties:
     syntax:
       content: 'name: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: totalSize
     uid: >-
       azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.totalSize
@@ -48,8 +48,8 @@ properties:
     syntax:
       content: 'totalSize: number'
       return:
-        type: number
         description: ''
+        type: number
 methods:
   - name: getAutoIncrementFunction(number)
     uid: >-
@@ -60,14 +60,16 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAutoIncrementFunction(size: number)'
+      content: >-
+        function getAutoIncrementFunction(size: number): (error: any, retValue:
+        number) => void
       parameters:
         - id: size
           type: number
           description: ''
       return:
-        type: '(error: any, retValue: number) =&gt; void'
         description: ''
+        type: '(error: any, retValue: number) =&gt; void'
   - name: getAverageSpeed(boolean)
     uid: >-
       azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.getAverageSpeed
@@ -77,14 +79,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAverageSpeed(humanReadable: boolean)'
+      content: 'function getAverageSpeed(humanReadable: boolean): string'
       parameters:
         - id: humanReadable
           type: boolean
           description: ''
       return:
-        type: string
         description: ''
+        type: string
   - name: getCompletePercent(number)
     uid: >-
       azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.getCompletePercent
@@ -94,15 +96,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getCompletePercent(len: number)'
+      content: 'function getCompletePercent(len: number): number'
       parameters:
         - id: len
           type: number
           description: |
             The number of digits after the decimal point.
       return:
-        type: number
         description: ''
+        type: number
   - name: getCompleteSize(boolean)
     uid: >-
       azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.getCompleteSize
@@ -112,14 +114,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getCompleteSize(humanReadable: boolean)'
+      content: 'function getCompleteSize(humanReadable: boolean): string | number'
       parameters:
         - id: humanReadable
           type: boolean
           description: ''
       return:
-        type: string | number
         description: ''
+        type: string | number
   - name: getElapsedSeconds(boolean)
     uid: >-
       azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.getElapsedSeconds
@@ -129,14 +131,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getElapsedSeconds(humanReadable: boolean)'
+      content: 'function getElapsedSeconds(humanReadable: boolean): number'
       parameters:
         - id: humanReadable
           type: boolean
           description: ''
       return:
-        type: number
         description: ''
+        type: number
   - name: getSpeed(boolean)
     uid: >-
       azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.getSpeed
@@ -146,14 +148,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getSpeed(humanReadable: boolean)'
+      content: 'function getSpeed(humanReadable: boolean): string | number'
       parameters:
         - id: humanReadable
           type: boolean
           description: ''
       return:
-        type: string | number
         description: ''
+        type: string | number
   - name: getTotalSize(boolean)
     uid: >-
       azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.getTotalSize
@@ -163,14 +165,14 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getTotalSize(humanReadable: boolean)'
+      content: 'function getTotalSize(humanReadable: boolean): string | number'
       parameters:
         - id: humanReadable
           type: boolean
           description: ''
       return:
-        type: string | number
         description: ''
+        type: string | number
   - name: increment(number)
     uid: >-
       azure-storage.azurestorage.common.streams.speedsummary.SpeedSummary.increment
@@ -180,12 +182,12 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function increment(len: number)'
+      content: 'function increment(len: number): number'
       parameters:
         - id: len
           type: number
           description: ''
       return:
-        type: number
         description: ''
+        type: number
 extends: any

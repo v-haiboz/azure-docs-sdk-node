@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'address?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: audience
     uid: '@azure/event-hubs.LinkEntityOptions.audience'
     package: '@azure/event-hubs'
@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'audience?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: name
     uid: '@azure/event-hubs.LinkEntityOptions.name'
     package: '@azure/event-hubs'
@@ -52,8 +52,8 @@ properties:
     syntax:
       content: 'name?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: partitionId
     uid: '@azure/event-hubs.LinkEntityOptions.partitionId'
     package: '@azure/event-hubs'
@@ -67,5 +67,5 @@ properties:
     syntax:
       content: 'partitionId?: string | number'
       return:
-        type: string | number
         description: ''
+        type: string | number

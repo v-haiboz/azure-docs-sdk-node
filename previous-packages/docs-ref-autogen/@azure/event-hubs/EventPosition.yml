@@ -38,8 +38,8 @@ properties:
     syntax:
       content: 'customFilter?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: endOfStream
     uid: '@azure/event-hubs.EventPosition.endOfStream'
     package: '@azure/event-hubs'
@@ -53,8 +53,8 @@ properties:
     syntax:
       content: 'static endOfStream: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: enqueuedTime
     uid: '@azure/event-hubs.EventPosition.enqueuedTime'
     package: '@azure/event-hubs'
@@ -70,8 +70,8 @@ properties:
     syntax:
       content: 'enqueuedTime?: Date | number'
       return:
-        type: Date | number
         description: ''
+        type: Date | number
   - name: isInclusive
     uid: '@azure/event-hubs.EventPosition.isInclusive'
     package: '@azure/event-hubs'
@@ -88,8 +88,8 @@ properties:
     syntax:
       content: 'isInclusive: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: offset
     uid: '@azure/event-hubs.EventPosition.offset'
     package: '@azure/event-hubs'
@@ -106,8 +106,8 @@ properties:
     syntax:
       content: 'offset?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: sequenceNumber
     uid: '@azure/event-hubs.EventPosition.sequenceNumber'
     package: '@azure/event-hubs'
@@ -123,8 +123,8 @@ properties:
     syntax:
       content: 'sequenceNumber?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
   - name: startOfStream
     uid: '@azure/event-hubs.EventPosition.startOfStream'
     package: '@azure/event-hubs'
@@ -138,8 +138,8 @@ properties:
     syntax:
       content: 'static startOfStream: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: fromEnd()
     uid: '@azure/event-hubs.EventPosition.fromEnd'
@@ -154,10 +154,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: static function fromEnd()
+      content: 'static function fromEnd(): EventPosition'
       return:
-        type: <xref uid="@azure/event-hubs.EventPosition" />
         description: EventPosition
+        type: <xref uid="@azure/event-hubs.EventPosition" />
   - name: fromEnqueuedTime(Date | number)
     uid: '@azure/event-hubs.EventPosition.fromEnqueuedTime'
     package: '@azure/event-hubs'
@@ -166,7 +166,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function fromEnqueuedTime(enqueuedTime: Date | number)'
+      content: >-
+        static function fromEnqueuedTime(enqueuedTime: Date | number):
+        EventPosition
       parameters:
         - id: enqueuedTime
           type: Date | number
@@ -174,8 +176,8 @@ methods:
             The enqueue time. This value represents the actual time of enqueuing
             the message.
       return:
-        type: <xref uid="@azure/event-hubs.EventPosition" />
         description: EventPosition
+        type: <xref uid="@azure/event-hubs.EventPosition" />
   - name: 'fromOffset(string, undefined | false | true)'
     uid: '@azure/event-hubs.EventPosition.fromOffset'
     package: '@azure/event-hubs'
@@ -186,7 +188,7 @@ methods:
     syntax:
       content: >-
         static function fromOffset(offset: string, isInclusive?: undefined |
-        false | true)
+        false | true): EventPosition
       parameters:
         - id: offset
           type: string
@@ -204,8 +206,8 @@ methods:
             If true, the specified event is included;
             otherwise the next event is returned. Default: false.
       return:
-        type: <xref uid="@azure/event-hubs.EventPosition" />
         description: EventPosition
+        type: <xref uid="@azure/event-hubs.EventPosition" />
   - name: 'fromSequenceNumber(number, undefined | false | true)'
     uid: '@azure/event-hubs.EventPosition.fromSequenceNumber'
     package: '@azure/event-hubs'
@@ -216,7 +218,7 @@ methods:
     syntax:
       content: >-
         static function fromSequenceNumber(sequenceNumber: number, isInclusive?:
-        undefined | false | true)
+        undefined | false | true): EventPosition
       parameters:
         - id: sequenceNumber
           type: number
@@ -229,8 +231,8 @@ methods:
             If true, the specified event is included;
             otherwise the next event is returned. Default false.
       return:
-        type: <xref uid="@azure/event-hubs.EventPosition" />
         description: EventPosition
+        type: <xref uid="@azure/event-hubs.EventPosition" />
   - name: fromStart()
     uid: '@azure/event-hubs.EventPosition.fromStart'
     package: '@azure/event-hubs'
@@ -243,10 +245,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: static function fromStart()
+      content: 'static function fromStart(): EventPosition'
       return:
-        type: <xref uid="@azure/event-hubs.EventPosition" />
         description: EventPosition
+        type: <xref uid="@azure/event-hubs.EventPosition" />
   - name: getExpression()
     uid: '@azure/event-hubs.EventPosition.getExpression'
     package: '@azure/event-hubs'
@@ -255,10 +257,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function getExpression()
+      content: 'function getExpression(): string'
       return:
-        type: string
         description: filterExpression
+        type: string
   - name: withCustomFilter(string)
     uid: '@azure/event-hubs.EventPosition.withCustomFilter'
     package: '@azure/event-hubs'
@@ -267,7 +269,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function withCustomFilter(customFilter: string)'
+      content: 'static function withCustomFilter(customFilter: string): EventPosition'
       parameters:
         - id: customFilter
           type: string
@@ -280,5 +282,5 @@ methods:
 
             your scenario.
       return:
-        type: <xref uid="@azure/event-hubs.EventPosition" />
         description: ''
+        type: <xref uid="@azure/event-hubs.EventPosition" />

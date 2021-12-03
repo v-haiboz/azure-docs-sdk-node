@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'Array: ArrayConstructor'
       return:
-        type: ArrayConstructor
         description: ''
+        type: ArrayConstructor
   - name: length
     uid: azure-arm-storage.UsageListResult.length
     package: azure-arm-storage
@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'length: number'
       return:
-        type: number
         description: ''
+        type: number
 methods:
   - name: 'concat(ConcatArray<Usage>[])'
     uid: azure-arm-storage.UsageListResult.concat
@@ -46,15 +46,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: ConcatArray<Usage>[])'
+      content: 'function concat(items: ConcatArray<Usage>[]): Usage[]'
       parameters:
         - id: items
           type: 'ConcatArray&lt;<xref uid="azure-arm-storage.Usage" />&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-arm-storage.Usage" />[]'
         description: ''
+        type: '<xref uid="azure-arm-storage.Usage" />[]'
   - name: 'concat(T | ConcatArray<T>[])'
     uid: azure-arm-storage.UsageListResult.concat_1
     package: azure-arm-storage
@@ -63,15 +63,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: T | ConcatArray<T>[]): Usage[]'
       parameters:
         - id: items
           type: 'T | ConcatArray&lt;T&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-arm-storage.Usage" />[]'
         description: ''
+        type: '<xref uid="azure-arm-storage.Usage" />[]'
   - name: 'every((value: Usage, index: number, array: Usage[]) => unknown, any)'
     uid: azure-arm-storage.UsageListResult.every
     package: azure-arm-storage
@@ -82,7 +82,7 @@ methods:
     syntax:
       content: >-
         function every(callbackfn: (value: Usage, index: number, array: Usage[])
-        => unknown, thisArg?: any)
+        => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: Usage, index: number, array: Usage[]) =&gt; unknown'
@@ -97,8 +97,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: 'filter((value: Usage, index: number, array: Usage[]) => unknown, any)'
     uid: azure-arm-storage.UsageListResult.filter_1
     package: azure-arm-storage
@@ -111,7 +111,7 @@ methods:
     syntax:
       content: >-
         function filter(callbackfn: (value: Usage, index: number, array:
-        Usage[]) => unknown, thisArg?: any)
+        Usage[]) => unknown, thisArg?: any): Usage[]
       parameters:
         - id: callbackfn
           type: '(value: Usage, index: number, array: Usage[]) =&gt; unknown'
@@ -126,8 +126,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="azure-arm-storage.Usage" />[]'
         description: ''
+        type: '<xref uid="azure-arm-storage.Usage" />[]'
   - name: 'filter<S>((value: Usage, index: number, array: Usage[]) => boolean, any)'
     uid: azure-arm-storage.UsageListResult.filter
     package: azure-arm-storage
@@ -140,7 +140,7 @@ methods:
     syntax:
       content: >-
         function filter<S>(callbackfn: (value: Usage, index: number, array:
-        Usage[]) => boolean, thisArg?: any)
+        Usage[]) => boolean, thisArg?: any): S[]
       parameters:
         - id: callbackfn
           type: '(value: Usage, index: number, array: Usage[]) =&gt; boolean'
@@ -155,8 +155,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'S[]'
         description: ''
+        type: 'S[]'
   - name: 'forEach((value: Usage, index: number, array: Usage[]) => void, any)'
     uid: azure-arm-storage.UsageListResult.forEach
     package: azure-arm-storage
@@ -188,7 +188,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function indexOf(searchElement: Usage, fromIndex?: number)'
+      content: 'function indexOf(searchElement: Usage, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: <xref uid="azure-arm-storage.Usage" />
@@ -199,8 +199,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at index 0.
       return:
-        type: number
         description: ''
+        type: number
   - name: join(string)
     uid: azure-arm-storage.UsageListResult.join
     package: azure-arm-storage
@@ -211,7 +211,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function join(separator?: string)'
+      content: 'function join(separator?: string): string'
       parameters:
         - id: separator
           type: string
@@ -220,8 +220,8 @@ methods:
             the resulting String. If omitted, the array elements are separated
             with a comma.
       return:
-        type: string
         description: ''
+        type: string
   - name: 'lastIndexOf(Usage, number)'
     uid: azure-arm-storage.UsageListResult.lastIndexOf
     package: azure-arm-storage
@@ -230,7 +230,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function lastIndexOf(searchElement: Usage, fromIndex?: number)'
+      content: 'function lastIndexOf(searchElement: Usage, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: <xref uid="azure-arm-storage.Usage" />
@@ -241,8 +241,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
       return:
-        type: number
         description: ''
+        type: number
   - name: 'map<U>((value: Usage, index: number, array: Usage[]) => U, any)'
     uid: azure-arm-storage.UsageListResult.map
     package: azure-arm-storage
@@ -255,7 +255,7 @@ methods:
     syntax:
       content: >-
         function map<U>(callbackfn: (value: Usage, index: number, array:
-        Usage[]) => U, thisArg?: any)
+        Usage[]) => U, thisArg?: any): U[]
       parameters:
         - id: callbackfn
           type: '(value: Usage, index: number, array: Usage[]) =&gt; U'
@@ -269,8 +269,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'U[]'
         description: ''
+        type: 'U[]'
   - name: pop()
     uid: azure-arm-storage.UsageListResult.pop
     package: azure-arm-storage
@@ -279,10 +279,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function pop()
+      content: 'function pop(): Usage | undefined'
       return:
-        type: <xref uid="azure-arm-storage.Usage" /> | undefined
         description: ''
+        type: <xref uid="azure-arm-storage.Usage" /> | undefined
   - name: 'push(Usage[])'
     uid: azure-arm-storage.UsageListResult.push
     package: azure-arm-storage
@@ -291,15 +291,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function push(items: Usage[])'
+      content: 'function push(items: Usage[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-arm-storage.Usage" />[]'
           description: |
             New elements of the Array.
       return:
-        type: number
         description: ''
+        type: number
   - name: >-
       reduce((previousValue: Usage, currentValue: Usage, currentIndex: number,
       array: Usage[]) => Usage)
@@ -315,7 +315,7 @@ methods:
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Usage, currentValue: Usage,
-        currentIndex: number, array: Usage[]) => Usage)
+        currentIndex: number, array: Usage[]) => Usage): Usage
       parameters:
         - id: callbackfn
           type: >-
@@ -326,8 +326,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-arm-storage.Usage" />
         description: ''
+        type: <xref uid="azure-arm-storage.Usage" />
   - name: >-
       reduce((previousValue: Usage, currentValue: Usage, currentIndex: number,
       array: Usage[]) => Usage, Usage)
@@ -340,7 +340,8 @@ methods:
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Usage, currentValue: Usage,
-        currentIndex: number, array: Usage[]) => Usage, initialValue: Usage)
+        currentIndex: number, array: Usage[]) => Usage, initialValue: Usage):
+        Usage
       parameters:
         - id: callbackfn
           type: >-
@@ -351,8 +352,8 @@ methods:
           type: <xref uid="azure-arm-storage.Usage" />
           description: ''
       return:
-        type: <xref uid="azure-arm-storage.Usage" />
         description: ''
+        type: <xref uid="azure-arm-storage.Usage" />
   - name: >-
       reduce<U>((previousValue: U, currentValue: Usage, currentIndex: number,
       array: Usage[]) => U, U)
@@ -368,7 +369,7 @@ methods:
     syntax:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue: Usage,
-        currentIndex: number, array: Usage[]) => U, initialValue: U)
+        currentIndex: number, array: Usage[]) => U, initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -385,8 +386,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: >-
       reduceRight((previousValue: Usage, currentValue: Usage, currentIndex:
       number, array: Usage[]) => Usage)
@@ -403,7 +404,7 @@ methods:
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Usage, currentValue:
-        Usage, currentIndex: number, array: Usage[]) => Usage)
+        Usage, currentIndex: number, array: Usage[]) => Usage): Usage
       parameters:
         - id: callbackfn
           type: >-
@@ -414,8 +415,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-arm-storage.Usage" />
         description: ''
+        type: <xref uid="azure-arm-storage.Usage" />
   - name: >-
       reduceRight((previousValue: Usage, currentValue: Usage, currentIndex:
       number, array: Usage[]) => Usage, Usage)
@@ -429,7 +430,7 @@ methods:
       content: >-
         function reduceRight(callbackfn: (previousValue: Usage, currentValue:
         Usage, currentIndex: number, array: Usage[]) => Usage, initialValue:
-        Usage)
+        Usage): Usage
       parameters:
         - id: callbackfn
           type: >-
@@ -440,8 +441,8 @@ methods:
           type: <xref uid="azure-arm-storage.Usage" />
           description: ''
       return:
-        type: <xref uid="azure-arm-storage.Usage" />
         description: ''
+        type: <xref uid="azure-arm-storage.Usage" />
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Usage, currentIndex:
       number, array: Usage[]) => U, U)
@@ -458,7 +459,7 @@ methods:
     syntax:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
-        Usage, currentIndex: number, array: Usage[]) => U, initialValue: U)
+        Usage, currentIndex: number, array: Usage[]) => U, initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -475,8 +476,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: reverse()
     uid: azure-arm-storage.UsageListResult.reverse
     package: azure-arm-storage
@@ -485,10 +486,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function reverse()
+      content: 'function reverse(): Usage[]'
       return:
-        type: '<xref uid="azure-arm-storage.Usage" />[]'
         description: ''
+        type: '<xref uid="azure-arm-storage.Usage" />[]'
   - name: shift()
     uid: azure-arm-storage.UsageListResult.shift
     package: azure-arm-storage
@@ -497,10 +498,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function shift()
+      content: 'function shift(): Usage | undefined'
       return:
-        type: <xref uid="azure-arm-storage.Usage" /> | undefined
         description: ''
+        type: <xref uid="azure-arm-storage.Usage" /> | undefined
   - name: 'slice(number, number)'
     uid: azure-arm-storage.UsageListResult.slice
     package: azure-arm-storage
@@ -509,7 +510,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function slice(start?: number, end?: number)'
+      content: 'function slice(start?: number, end?: number): Usage[]'
       parameters:
         - id: start
           type: number
@@ -519,8 +520,8 @@ methods:
           description: |
             The end of the specified portion of the array.
       return:
-        type: '<xref uid="azure-arm-storage.Usage" />[]'
         description: ''
+        type: '<xref uid="azure-arm-storage.Usage" />[]'
   - name: 'some((value: Usage, index: number, array: Usage[]) => unknown, any)'
     uid: azure-arm-storage.UsageListResult.some
     package: azure-arm-storage
@@ -533,7 +534,7 @@ methods:
     syntax:
       content: >-
         function some(callbackfn: (value: Usage, index: number, array: Usage[])
-        => unknown, thisArg?: any)
+        => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: Usage, index: number, array: Usage[]) =&gt; unknown'
@@ -548,8 +549,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: 'sort((a: Usage, b: Usage) => number)'
     uid: azure-arm-storage.UsageListResult.sort
     package: azure-arm-storage
@@ -558,7 +559,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function sort(compareFn?: (a: Usage, b: Usage) => number)'
+      content: 'function sort(compareFn?: (a: Usage, b: Usage) => number): this'
       parameters:
         - id: compareFn
           type: '(a: Usage, b: Usage) =&gt; number'
@@ -567,8 +568,8 @@ methods:
             elements. If omitted, the elements are sorted in ascending, ASCII
             character order.
       return:
-        type: this
         description: ''
+        type: this
   - name: 'splice(number, number)'
     uid: azure-arm-storage.UsageListResult.splice
     package: azure-arm-storage
@@ -579,7 +580,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount?: number)'
+      content: 'function splice(start: number, deleteCount?: number): Usage[]'
       parameters:
         - id: start
           type: number
@@ -591,8 +592,8 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="azure-arm-storage.Usage" />[]'
         description: ''
+        type: '<xref uid="azure-arm-storage.Usage" />[]'
   - name: 'splice(number, number, Usage[])'
     uid: azure-arm-storage.UsageListResult.splice_1
     package: azure-arm-storage
@@ -603,7 +604,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount: number, items: Usage[])'
+      content: >-
+        function splice(start: number, deleteCount: number, items: Usage[]):
+        Usage[]
       parameters:
         - id: start
           type: number
@@ -618,8 +621,8 @@ methods:
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="azure-arm-storage.Usage" />[]'
         description: ''
+        type: '<xref uid="azure-arm-storage.Usage" />[]'
   - name: toLocaleString()
     uid: azure-arm-storage.UsageListResult.toLocaleString
     package: azure-arm-storage
@@ -630,10 +633,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toLocaleString()
+      content: 'function toLocaleString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: toString()
     uid: azure-arm-storage.UsageListResult.toString
     package: azure-arm-storage
@@ -642,10 +645,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toString()
+      content: 'function toString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: 'unshift(Usage[])'
     uid: azure-arm-storage.UsageListResult.unshift
     package: azure-arm-storage
@@ -654,13 +657,13 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function unshift(items: Usage[])'
+      content: 'function unshift(items: Usage[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-arm-storage.Usage" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
-        type: number
         description: ''
+        type: number
 extends: Array&lt;<xref uid="azure-arm-storage.Usage" />&gt;

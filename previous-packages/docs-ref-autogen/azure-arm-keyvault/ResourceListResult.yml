@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'Array: ArrayConstructor'
       return:
-        type: ArrayConstructor
         description: ''
+        type: ArrayConstructor
   - name: length
     uid: azure-arm-keyvault.ResourceListResult.length
     package: azure-arm-keyvault
@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'length: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: nextLink
     uid: azure-arm-keyvault.ResourceListResult.nextLink
     package: azure-arm-keyvault
@@ -48,8 +48,8 @@ properties:
     syntax:
       content: 'nextLink?: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'concat(ConcatArray<Resource>[])'
     uid: azure-arm-keyvault.ResourceListResult.concat
@@ -59,15 +59,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: ConcatArray<Resource>[])'
+      content: 'function concat(items: ConcatArray<Resource>[]): Resource[]'
       parameters:
         - id: items
           type: 'ConcatArray&lt;<xref uid="azure-arm-keyvault.Resource" />&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
   - name: 'concat(T | ConcatArray<T>[])'
     uid: azure-arm-keyvault.ResourceListResult.concat_1
     package: azure-arm-keyvault
@@ -76,15 +76,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: T | ConcatArray<T>[]): Resource[]'
       parameters:
         - id: items
           type: 'T | ConcatArray&lt;T&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
   - name: 'every((value: Resource, index: number, array: Resource[]) => unknown, any)'
     uid: azure-arm-keyvault.ResourceListResult.every
     package: azure-arm-keyvault
@@ -95,7 +95,7 @@ methods:
     syntax:
       content: >-
         function every(callbackfn: (value: Resource, index: number, array:
-        Resource[]) => unknown, thisArg?: any)
+        Resource[]) => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: Resource, index: number, array: Resource[]) =&gt; unknown'
@@ -110,8 +110,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: >-
       filter((value: Resource, index: number, array: Resource[]) => unknown,
       any)
@@ -126,7 +126,7 @@ methods:
     syntax:
       content: >-
         function filter(callbackfn: (value: Resource, index: number, array:
-        Resource[]) => unknown, thisArg?: any)
+        Resource[]) => unknown, thisArg?: any): Resource[]
       parameters:
         - id: callbackfn
           type: '(value: Resource, index: number, array: Resource[]) =&gt; unknown'
@@ -141,8 +141,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
   - name: >-
       filter<S>((value: Resource, index: number, array: Resource[]) => boolean,
       any)
@@ -157,7 +157,7 @@ methods:
     syntax:
       content: >-
         function filter<S>(callbackfn: (value: Resource, index: number, array:
-        Resource[]) => boolean, thisArg?: any)
+        Resource[]) => boolean, thisArg?: any): S[]
       parameters:
         - id: callbackfn
           type: '(value: Resource, index: number, array: Resource[]) =&gt; boolean'
@@ -172,8 +172,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'S[]'
         description: ''
+        type: 'S[]'
   - name: 'forEach((value: Resource, index: number, array: Resource[]) => void, any)'
     uid: azure-arm-keyvault.ResourceListResult.forEach
     package: azure-arm-keyvault
@@ -205,7 +205,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function indexOf(searchElement: Resource, fromIndex?: number)'
+      content: 'function indexOf(searchElement: Resource, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: <xref uid="azure-arm-keyvault.Resource" />
@@ -216,8 +216,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at index 0.
       return:
-        type: number
         description: ''
+        type: number
   - name: join(string)
     uid: azure-arm-keyvault.ResourceListResult.join
     package: azure-arm-keyvault
@@ -228,7 +228,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function join(separator?: string)'
+      content: 'function join(separator?: string): string'
       parameters:
         - id: separator
           type: string
@@ -237,8 +237,8 @@ methods:
             the resulting String. If omitted, the array elements are separated
             with a comma.
       return:
-        type: string
         description: ''
+        type: string
   - name: 'lastIndexOf(Resource, number)'
     uid: azure-arm-keyvault.ResourceListResult.lastIndexOf
     package: azure-arm-keyvault
@@ -247,7 +247,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function lastIndexOf(searchElement: Resource, fromIndex?: number)'
+      content: >-
+        function lastIndexOf(searchElement: Resource, fromIndex?: number):
+        number
       parameters:
         - id: searchElement
           type: <xref uid="azure-arm-keyvault.Resource" />
@@ -258,8 +260,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
       return:
-        type: number
         description: ''
+        type: number
   - name: 'map<U>((value: Resource, index: number, array: Resource[]) => U, any)'
     uid: azure-arm-keyvault.ResourceListResult.map
     package: azure-arm-keyvault
@@ -272,7 +274,7 @@ methods:
     syntax:
       content: >-
         function map<U>(callbackfn: (value: Resource, index: number, array:
-        Resource[]) => U, thisArg?: any)
+        Resource[]) => U, thisArg?: any): U[]
       parameters:
         - id: callbackfn
           type: '(value: Resource, index: number, array: Resource[]) =&gt; U'
@@ -286,8 +288,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'U[]'
         description: ''
+        type: 'U[]'
   - name: pop()
     uid: azure-arm-keyvault.ResourceListResult.pop
     package: azure-arm-keyvault
@@ -296,10 +298,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function pop()
+      content: 'function pop(): Resource | undefined'
       return:
-        type: <xref uid="azure-arm-keyvault.Resource" /> | undefined
         description: ''
+        type: <xref uid="azure-arm-keyvault.Resource" /> | undefined
   - name: 'push(Resource[])'
     uid: azure-arm-keyvault.ResourceListResult.push
     package: azure-arm-keyvault
@@ -308,15 +310,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function push(items: Resource[])'
+      content: 'function push(items: Resource[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-arm-keyvault.Resource" />[]'
           description: |
             New elements of the Array.
       return:
-        type: number
         description: ''
+        type: number
   - name: >-
       reduce((previousValue: Resource, currentValue: Resource, currentIndex:
       number, array: Resource[]) => Resource)
@@ -332,7 +334,8 @@ methods:
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Resource, currentValue:
-        Resource, currentIndex: number, array: Resource[]) => Resource)
+        Resource, currentIndex: number, array: Resource[]) => Resource):
+        Resource
       parameters:
         - id: callbackfn
           type: >-
@@ -343,8 +346,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-arm-keyvault.Resource" />
         description: ''
+        type: <xref uid="azure-arm-keyvault.Resource" />
   - name: >-
       reduce((previousValue: Resource, currentValue: Resource, currentIndex:
       number, array: Resource[]) => Resource, Resource)
@@ -358,7 +361,7 @@ methods:
       content: >-
         function reduce(callbackfn: (previousValue: Resource, currentValue:
         Resource, currentIndex: number, array: Resource[]) => Resource,
-        initialValue: Resource)
+        initialValue: Resource): Resource
       parameters:
         - id: callbackfn
           type: >-
@@ -369,8 +372,8 @@ methods:
           type: <xref uid="azure-arm-keyvault.Resource" />
           description: ''
       return:
-        type: <xref uid="azure-arm-keyvault.Resource" />
         description: ''
+        type: <xref uid="azure-arm-keyvault.Resource" />
   - name: >-
       reduce<U>((previousValue: U, currentValue: Resource, currentIndex: number,
       array: Resource[]) => U, U)
@@ -387,7 +390,7 @@ methods:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue:
         Resource, currentIndex: number, array: Resource[]) => U, initialValue:
-        U)
+        U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -404,8 +407,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: >-
       reduceRight((previousValue: Resource, currentValue: Resource,
       currentIndex: number, array: Resource[]) => Resource)
@@ -422,7 +425,8 @@ methods:
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Resource, currentValue:
-        Resource, currentIndex: number, array: Resource[]) => Resource)
+        Resource, currentIndex: number, array: Resource[]) => Resource):
+        Resource
       parameters:
         - id: callbackfn
           type: >-
@@ -433,8 +437,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-arm-keyvault.Resource" />
         description: ''
+        type: <xref uid="azure-arm-keyvault.Resource" />
   - name: >-
       reduceRight((previousValue: Resource, currentValue: Resource,
       currentIndex: number, array: Resource[]) => Resource, Resource)
@@ -448,7 +452,7 @@ methods:
       content: >-
         function reduceRight(callbackfn: (previousValue: Resource, currentValue:
         Resource, currentIndex: number, array: Resource[]) => Resource,
-        initialValue: Resource)
+        initialValue: Resource): Resource
       parameters:
         - id: callbackfn
           type: >-
@@ -459,8 +463,8 @@ methods:
           type: <xref uid="azure-arm-keyvault.Resource" />
           description: ''
       return:
-        type: <xref uid="azure-arm-keyvault.Resource" />
         description: ''
+        type: <xref uid="azure-arm-keyvault.Resource" />
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Resource, currentIndex:
       number, array: Resource[]) => U, U)
@@ -478,7 +482,7 @@ methods:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
         Resource, currentIndex: number, array: Resource[]) => U, initialValue:
-        U)
+        U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -495,8 +499,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: reverse()
     uid: azure-arm-keyvault.ResourceListResult.reverse
     package: azure-arm-keyvault
@@ -505,10 +509,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function reverse()
+      content: 'function reverse(): Resource[]'
       return:
-        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
   - name: shift()
     uid: azure-arm-keyvault.ResourceListResult.shift
     package: azure-arm-keyvault
@@ -517,10 +521,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function shift()
+      content: 'function shift(): Resource | undefined'
       return:
-        type: <xref uid="azure-arm-keyvault.Resource" /> | undefined
         description: ''
+        type: <xref uid="azure-arm-keyvault.Resource" /> | undefined
   - name: 'slice(number, number)'
     uid: azure-arm-keyvault.ResourceListResult.slice
     package: azure-arm-keyvault
@@ -529,7 +533,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function slice(start?: number, end?: number)'
+      content: 'function slice(start?: number, end?: number): Resource[]'
       parameters:
         - id: start
           type: number
@@ -539,8 +543,8 @@ methods:
           description: |
             The end of the specified portion of the array.
       return:
-        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
   - name: 'some((value: Resource, index: number, array: Resource[]) => unknown, any)'
     uid: azure-arm-keyvault.ResourceListResult.some
     package: azure-arm-keyvault
@@ -553,7 +557,7 @@ methods:
     syntax:
       content: >-
         function some(callbackfn: (value: Resource, index: number, array:
-        Resource[]) => unknown, thisArg?: any)
+        Resource[]) => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: Resource, index: number, array: Resource[]) =&gt; unknown'
@@ -568,8 +572,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: 'sort((a: Resource, b: Resource) => number)'
     uid: azure-arm-keyvault.ResourceListResult.sort
     package: azure-arm-keyvault
@@ -578,7 +582,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function sort(compareFn?: (a: Resource, b: Resource) => number)'
+      content: 'function sort(compareFn?: (a: Resource, b: Resource) => number): this'
       parameters:
         - id: compareFn
           type: '(a: Resource, b: Resource) =&gt; number'
@@ -587,8 +591,8 @@ methods:
             elements. If omitted, the elements are sorted in ascending, ASCII
             character order.
       return:
-        type: this
         description: ''
+        type: this
   - name: 'splice(number, number)'
     uid: azure-arm-keyvault.ResourceListResult.splice
     package: azure-arm-keyvault
@@ -599,7 +603,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount?: number)'
+      content: 'function splice(start: number, deleteCount?: number): Resource[]'
       parameters:
         - id: start
           type: number
@@ -611,8 +615,8 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
   - name: 'splice(number, number, Resource[])'
     uid: azure-arm-keyvault.ResourceListResult.splice_1
     package: azure-arm-keyvault
@@ -623,7 +627,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount: number, items: Resource[])'
+      content: >-
+        function splice(start: number, deleteCount: number, items: Resource[]):
+        Resource[]
       parameters:
         - id: start
           type: number
@@ -638,8 +644,8 @@ methods:
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Resource" />[]'
   - name: toLocaleString()
     uid: azure-arm-keyvault.ResourceListResult.toLocaleString
     package: azure-arm-keyvault
@@ -650,10 +656,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toLocaleString()
+      content: 'function toLocaleString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: toString()
     uid: azure-arm-keyvault.ResourceListResult.toString
     package: azure-arm-keyvault
@@ -662,10 +668,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toString()
+      content: 'function toString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: 'unshift(Resource[])'
     uid: azure-arm-keyvault.ResourceListResult.unshift
     package: azure-arm-keyvault
@@ -674,13 +680,13 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function unshift(items: Resource[])'
+      content: 'function unshift(items: Resource[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-arm-keyvault.Resource" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
-        type: number
         description: ''
+        type: number
 extends: Array&lt;<xref uid="azure-arm-keyvault.Resource" />&gt;

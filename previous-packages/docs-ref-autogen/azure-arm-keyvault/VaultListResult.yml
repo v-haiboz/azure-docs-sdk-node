@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'Array: ArrayConstructor'
       return:
-        type: ArrayConstructor
         description: ''
+        type: ArrayConstructor
   - name: length
     uid: azure-arm-keyvault.VaultListResult.length
     package: azure-arm-keyvault
@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'length: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: nextLink
     uid: azure-arm-keyvault.VaultListResult.nextLink
     package: azure-arm-keyvault
@@ -48,8 +48,8 @@ properties:
     syntax:
       content: 'nextLink?: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'concat(ConcatArray<Vault>[])'
     uid: azure-arm-keyvault.VaultListResult.concat
@@ -59,15 +59,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: ConcatArray<Vault>[])'
+      content: 'function concat(items: ConcatArray<Vault>[]): Vault[]'
       parameters:
         - id: items
           type: 'ConcatArray&lt;<xref uid="azure-arm-keyvault.Vault" />&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
   - name: 'concat(T | ConcatArray<T>[])'
     uid: azure-arm-keyvault.VaultListResult.concat_1
     package: azure-arm-keyvault
@@ -76,15 +76,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: T | ConcatArray<T>[]): Vault[]'
       parameters:
         - id: items
           type: 'T | ConcatArray&lt;T&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
   - name: 'every((value: Vault, index: number, array: Vault[]) => unknown, any)'
     uid: azure-arm-keyvault.VaultListResult.every
     package: azure-arm-keyvault
@@ -95,7 +95,7 @@ methods:
     syntax:
       content: >-
         function every(callbackfn: (value: Vault, index: number, array: Vault[])
-        => unknown, thisArg?: any)
+        => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: Vault, index: number, array: Vault[]) =&gt; unknown'
@@ -110,8 +110,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: 'filter((value: Vault, index: number, array: Vault[]) => unknown, any)'
     uid: azure-arm-keyvault.VaultListResult.filter_1
     package: azure-arm-keyvault
@@ -124,7 +124,7 @@ methods:
     syntax:
       content: >-
         function filter(callbackfn: (value: Vault, index: number, array:
-        Vault[]) => unknown, thisArg?: any)
+        Vault[]) => unknown, thisArg?: any): Vault[]
       parameters:
         - id: callbackfn
           type: '(value: Vault, index: number, array: Vault[]) =&gt; unknown'
@@ -139,8 +139,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
   - name: 'filter<S>((value: Vault, index: number, array: Vault[]) => boolean, any)'
     uid: azure-arm-keyvault.VaultListResult.filter
     package: azure-arm-keyvault
@@ -153,7 +153,7 @@ methods:
     syntax:
       content: >-
         function filter<S>(callbackfn: (value: Vault, index: number, array:
-        Vault[]) => boolean, thisArg?: any)
+        Vault[]) => boolean, thisArg?: any): S[]
       parameters:
         - id: callbackfn
           type: '(value: Vault, index: number, array: Vault[]) =&gt; boolean'
@@ -168,8 +168,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'S[]'
         description: ''
+        type: 'S[]'
   - name: 'forEach((value: Vault, index: number, array: Vault[]) => void, any)'
     uid: azure-arm-keyvault.VaultListResult.forEach
     package: azure-arm-keyvault
@@ -201,7 +201,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function indexOf(searchElement: Vault, fromIndex?: number)'
+      content: 'function indexOf(searchElement: Vault, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: <xref uid="azure-arm-keyvault.Vault" />
@@ -212,8 +212,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at index 0.
       return:
-        type: number
         description: ''
+        type: number
   - name: join(string)
     uid: azure-arm-keyvault.VaultListResult.join
     package: azure-arm-keyvault
@@ -224,7 +224,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function join(separator?: string)'
+      content: 'function join(separator?: string): string'
       parameters:
         - id: separator
           type: string
@@ -233,8 +233,8 @@ methods:
             the resulting String. If omitted, the array elements are separated
             with a comma.
       return:
-        type: string
         description: ''
+        type: string
   - name: 'lastIndexOf(Vault, number)'
     uid: azure-arm-keyvault.VaultListResult.lastIndexOf
     package: azure-arm-keyvault
@@ -243,7 +243,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function lastIndexOf(searchElement: Vault, fromIndex?: number)'
+      content: 'function lastIndexOf(searchElement: Vault, fromIndex?: number): number'
       parameters:
         - id: searchElement
           type: <xref uid="azure-arm-keyvault.Vault" />
@@ -254,8 +254,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
       return:
-        type: number
         description: ''
+        type: number
   - name: 'map<U>((value: Vault, index: number, array: Vault[]) => U, any)'
     uid: azure-arm-keyvault.VaultListResult.map
     package: azure-arm-keyvault
@@ -268,7 +268,7 @@ methods:
     syntax:
       content: >-
         function map<U>(callbackfn: (value: Vault, index: number, array:
-        Vault[]) => U, thisArg?: any)
+        Vault[]) => U, thisArg?: any): U[]
       parameters:
         - id: callbackfn
           type: '(value: Vault, index: number, array: Vault[]) =&gt; U'
@@ -282,8 +282,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'U[]'
         description: ''
+        type: 'U[]'
   - name: pop()
     uid: azure-arm-keyvault.VaultListResult.pop
     package: azure-arm-keyvault
@@ -292,10 +292,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function pop()
+      content: 'function pop(): Vault | undefined'
       return:
-        type: <xref uid="azure-arm-keyvault.Vault" /> | undefined
         description: ''
+        type: <xref uid="azure-arm-keyvault.Vault" /> | undefined
   - name: 'push(Vault[])'
     uid: azure-arm-keyvault.VaultListResult.push
     package: azure-arm-keyvault
@@ -304,15 +304,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function push(items: Vault[])'
+      content: 'function push(items: Vault[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-arm-keyvault.Vault" />[]'
           description: |
             New elements of the Array.
       return:
-        type: number
         description: ''
+        type: number
   - name: >-
       reduce((previousValue: Vault, currentValue: Vault, currentIndex: number,
       array: Vault[]) => Vault)
@@ -328,7 +328,7 @@ methods:
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Vault, currentValue: Vault,
-        currentIndex: number, array: Vault[]) => Vault)
+        currentIndex: number, array: Vault[]) => Vault): Vault
       parameters:
         - id: callbackfn
           type: >-
@@ -339,8 +339,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-arm-keyvault.Vault" />
         description: ''
+        type: <xref uid="azure-arm-keyvault.Vault" />
   - name: >-
       reduce((previousValue: Vault, currentValue: Vault, currentIndex: number,
       array: Vault[]) => Vault, Vault)
@@ -353,7 +353,8 @@ methods:
     syntax:
       content: >-
         function reduce(callbackfn: (previousValue: Vault, currentValue: Vault,
-        currentIndex: number, array: Vault[]) => Vault, initialValue: Vault)
+        currentIndex: number, array: Vault[]) => Vault, initialValue: Vault):
+        Vault
       parameters:
         - id: callbackfn
           type: >-
@@ -364,8 +365,8 @@ methods:
           type: <xref uid="azure-arm-keyvault.Vault" />
           description: ''
       return:
-        type: <xref uid="azure-arm-keyvault.Vault" />
         description: ''
+        type: <xref uid="azure-arm-keyvault.Vault" />
   - name: >-
       reduce<U>((previousValue: U, currentValue: Vault, currentIndex: number,
       array: Vault[]) => U, U)
@@ -381,7 +382,7 @@ methods:
     syntax:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue: Vault,
-        currentIndex: number, array: Vault[]) => U, initialValue: U)
+        currentIndex: number, array: Vault[]) => U, initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -398,8 +399,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: >-
       reduceRight((previousValue: Vault, currentValue: Vault, currentIndex:
       number, array: Vault[]) => Vault)
@@ -416,7 +417,7 @@ methods:
     syntax:
       content: >-
         function reduceRight(callbackfn: (previousValue: Vault, currentValue:
-        Vault, currentIndex: number, array: Vault[]) => Vault)
+        Vault, currentIndex: number, array: Vault[]) => Vault): Vault
       parameters:
         - id: callbackfn
           type: >-
@@ -427,8 +428,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-arm-keyvault.Vault" />
         description: ''
+        type: <xref uid="azure-arm-keyvault.Vault" />
   - name: >-
       reduceRight((previousValue: Vault, currentValue: Vault, currentIndex:
       number, array: Vault[]) => Vault, Vault)
@@ -442,7 +443,7 @@ methods:
       content: >-
         function reduceRight(callbackfn: (previousValue: Vault, currentValue:
         Vault, currentIndex: number, array: Vault[]) => Vault, initialValue:
-        Vault)
+        Vault): Vault
       parameters:
         - id: callbackfn
           type: >-
@@ -453,8 +454,8 @@ methods:
           type: <xref uid="azure-arm-keyvault.Vault" />
           description: ''
       return:
-        type: <xref uid="azure-arm-keyvault.Vault" />
         description: ''
+        type: <xref uid="azure-arm-keyvault.Vault" />
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Vault, currentIndex:
       number, array: Vault[]) => U, U)
@@ -471,7 +472,7 @@ methods:
     syntax:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
-        Vault, currentIndex: number, array: Vault[]) => U, initialValue: U)
+        Vault, currentIndex: number, array: Vault[]) => U, initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -488,8 +489,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: reverse()
     uid: azure-arm-keyvault.VaultListResult.reverse
     package: azure-arm-keyvault
@@ -498,10 +499,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function reverse()
+      content: 'function reverse(): Vault[]'
       return:
-        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
   - name: shift()
     uid: azure-arm-keyvault.VaultListResult.shift
     package: azure-arm-keyvault
@@ -510,10 +511,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function shift()
+      content: 'function shift(): Vault | undefined'
       return:
-        type: <xref uid="azure-arm-keyvault.Vault" /> | undefined
         description: ''
+        type: <xref uid="azure-arm-keyvault.Vault" /> | undefined
   - name: 'slice(number, number)'
     uid: azure-arm-keyvault.VaultListResult.slice
     package: azure-arm-keyvault
@@ -522,7 +523,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function slice(start?: number, end?: number)'
+      content: 'function slice(start?: number, end?: number): Vault[]'
       parameters:
         - id: start
           type: number
@@ -532,8 +533,8 @@ methods:
           description: |
             The end of the specified portion of the array.
       return:
-        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
   - name: 'some((value: Vault, index: number, array: Vault[]) => unknown, any)'
     uid: azure-arm-keyvault.VaultListResult.some
     package: azure-arm-keyvault
@@ -546,7 +547,7 @@ methods:
     syntax:
       content: >-
         function some(callbackfn: (value: Vault, index: number, array: Vault[])
-        => unknown, thisArg?: any)
+        => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: '(value: Vault, index: number, array: Vault[]) =&gt; unknown'
@@ -561,8 +562,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: 'sort((a: Vault, b: Vault) => number)'
     uid: azure-arm-keyvault.VaultListResult.sort
     package: azure-arm-keyvault
@@ -571,7 +572,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function sort(compareFn?: (a: Vault, b: Vault) => number)'
+      content: 'function sort(compareFn?: (a: Vault, b: Vault) => number): this'
       parameters:
         - id: compareFn
           type: '(a: Vault, b: Vault) =&gt; number'
@@ -580,8 +581,8 @@ methods:
             elements. If omitted, the elements are sorted in ascending, ASCII
             character order.
       return:
-        type: this
         description: ''
+        type: this
   - name: 'splice(number, number)'
     uid: azure-arm-keyvault.VaultListResult.splice
     package: azure-arm-keyvault
@@ -592,7 +593,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount?: number)'
+      content: 'function splice(start: number, deleteCount?: number): Vault[]'
       parameters:
         - id: start
           type: number
@@ -604,8 +605,8 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
   - name: 'splice(number, number, Vault[])'
     uid: azure-arm-keyvault.VaultListResult.splice_1
     package: azure-arm-keyvault
@@ -616,7 +617,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount: number, items: Vault[])'
+      content: >-
+        function splice(start: number, deleteCount: number, items: Vault[]):
+        Vault[]
       parameters:
         - id: start
           type: number
@@ -631,8 +634,8 @@ methods:
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
         description: ''
+        type: '<xref uid="azure-arm-keyvault.Vault" />[]'
   - name: toLocaleString()
     uid: azure-arm-keyvault.VaultListResult.toLocaleString
     package: azure-arm-keyvault
@@ -643,10 +646,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toLocaleString()
+      content: 'function toLocaleString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: toString()
     uid: azure-arm-keyvault.VaultListResult.toString
     package: azure-arm-keyvault
@@ -655,10 +658,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toString()
+      content: 'function toString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: 'unshift(Vault[])'
     uid: azure-arm-keyvault.VaultListResult.unshift
     package: azure-arm-keyvault
@@ -667,13 +670,13 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function unshift(items: Vault[])'
+      content: 'function unshift(items: Vault[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-arm-keyvault.Vault" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
-        type: number
         description: ''
+        type: number
 extends: Array&lt;<xref uid="azure-arm-keyvault.Vault" />&gt;

@@ -30,8 +30,8 @@ properties:
     syntax:
       content: 'dataTransformer?: DataTransformer'
       return:
-        type: DataTransformer
         description: ''
+        type: DataTransformer
   - name: tokenProvider
     uid: '@azure/event-hubs.ClientOptions.tokenProvider'
     package: '@azure/event-hubs'
@@ -47,8 +47,8 @@ properties:
     syntax:
       content: 'tokenProvider?: TokenProvider'
       return:
-        type: TokenProvider
         description: ''
+        type: TokenProvider
   - name: userAgent
     uid: '@azure/event-hubs.ClientOptions.userAgent'
     package: '@azure/event-hubs'
@@ -64,8 +64,8 @@ properties:
     syntax:
       content: 'userAgent?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: webSocket
     uid: '@azure/event-hubs.ClientOptions.webSocket'
     package: '@azure/event-hubs'
@@ -91,8 +91,8 @@ properties:
     syntax:
       content: 'webSocket?: WebSocketImpl'
       return:
-        type: WebSocketImpl
         description: ''
+        type: WebSocketImpl
   - name: webSocketConstructorOptions
     uid: '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
     package: '@azure/event-hubs'
@@ -106,6 +106,6 @@ properties:
     syntax:
       content: 'webSocketConstructorOptions?: any'
       return:
-        type: any
         description: ''
+        type: any
 extends: <xref uid="@azure/event-hubs.ClientOptionsBase" />

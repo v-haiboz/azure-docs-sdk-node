@@ -30,8 +30,8 @@ properties:
     syntax:
       content: 'dataTransformer?: DataTransformer'
       return:
-        type: DataTransformer
         description: ''
+        type: DataTransformer
   - name: userAgent
     uid: '@azure/event-hubs.ClientOptionsBase.userAgent'
     package: '@azure/event-hubs'
@@ -47,8 +47,8 @@ properties:
     syntax:
       content: 'userAgent?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: webSocket
     uid: '@azure/event-hubs.ClientOptionsBase.webSocket'
     package: '@azure/event-hubs'
@@ -74,8 +74,8 @@ properties:
     syntax:
       content: 'webSocket?: WebSocketImpl'
       return:
-        type: WebSocketImpl
         description: ''
+        type: WebSocketImpl
   - name: webSocketConstructorOptions
     uid: '@azure/event-hubs.ClientOptionsBase.webSocketConstructorOptions'
     package: '@azure/event-hubs'
@@ -89,5 +89,5 @@ properties:
     syntax:
       content: 'webSocketConstructorOptions?: any'
       return:
-        type: any
         description: ''
+        type: any

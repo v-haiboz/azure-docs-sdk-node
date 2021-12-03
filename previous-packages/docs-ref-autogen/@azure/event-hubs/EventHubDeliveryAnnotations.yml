@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'last_enqueued_offset?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: last_enqueued_sequence_number
     uid: >-
       @azure/event-hubs.EventHubDeliveryAnnotations.last_enqueued_sequence_number
@@ -36,8 +36,8 @@ properties:
     syntax:
       content: 'last_enqueued_sequence_number?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
   - name: last_enqueued_time_utc
     uid: '@azure/event-hubs.EventHubDeliveryAnnotations.last_enqueued_time_utc'
     package: '@azure/event-hubs'
@@ -49,8 +49,8 @@ properties:
     syntax:
       content: 'last_enqueued_time_utc?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
   - name: runtime_info_retrieval_time_utc
     uid: >-
       @azure/event-hubs.EventHubDeliveryAnnotations.runtime_info_retrieval_time_utc
@@ -65,6 +65,6 @@ properties:
     syntax:
       content: 'runtime_info_retrieval_time_utc?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
 extends: DeliveryAnnotations

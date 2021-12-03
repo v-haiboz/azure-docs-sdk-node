@@ -20,8 +20,8 @@ properties:
     syntax:
       content: 'Array: ArrayConstructor'
       return:
-        type: ArrayConstructor
         description: ''
+        type: ArrayConstructor
   - name: length
     uid: azure-keyvault.DeletedKeyListResult.length
     package: azure-keyvault
@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'length: number'
       return:
-        type: number
         description: ''
+        type: number
   - name: nextLink
     uid: azure-keyvault.DeletedKeyListResult.nextLink
     package: azure-keyvault
@@ -48,8 +48,8 @@ properties:
     syntax:
       content: 'nextLink?: string'
       return:
-        type: string
         description: ''
+        type: string
 methods:
   - name: 'concat(ConcatArray<DeletedKeyItem>[])'
     uid: azure-keyvault.DeletedKeyListResult.concat
@@ -59,15 +59,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: ConcatArray<DeletedKeyItem>[])'
+      content: 'function concat(items: ConcatArray<DeletedKeyItem>[]): DeletedKeyItem[]'
       parameters:
         - id: items
           type: 'ConcatArray&lt;<xref uid="azure-keyvault.DeletedKeyItem" />&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
   - name: 'concat(T | ConcatArray<T>[])'
     uid: azure-keyvault.DeletedKeyListResult.concat_1
     package: azure-keyvault
@@ -76,15 +76,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: T | ConcatArray<T>[]): DeletedKeyItem[]'
       parameters:
         - id: items
           type: 'T | ConcatArray&lt;T&gt;[]'
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
   - name: >-
       every((value: DeletedKeyItem, index: number, array: DeletedKeyItem[]) =>
       unknown, any)
@@ -97,7 +97,7 @@ methods:
     syntax:
       content: >-
         function every(callbackfn: (value: DeletedKeyItem, index: number, array:
-        DeletedKeyItem[]) => unknown, thisArg?: any)
+        DeletedKeyItem[]) => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: >-
@@ -114,8 +114,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: >-
       filter((value: DeletedKeyItem, index: number, array: DeletedKeyItem[]) =>
       unknown, any)
@@ -130,7 +130,7 @@ methods:
     syntax:
       content: >-
         function filter(callbackfn: (value: DeletedKeyItem, index: number,
-        array: DeletedKeyItem[]) => unknown, thisArg?: any)
+        array: DeletedKeyItem[]) => unknown, thisArg?: any): DeletedKeyItem[]
       parameters:
         - id: callbackfn
           type: >-
@@ -147,8 +147,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
   - name: >-
       filter<S>((value: DeletedKeyItem, index: number, array: DeletedKeyItem[])
       => boolean, any)
@@ -163,7 +163,7 @@ methods:
     syntax:
       content: >-
         function filter<S>(callbackfn: (value: DeletedKeyItem, index: number,
-        array: DeletedKeyItem[]) => boolean, thisArg?: any)
+        array: DeletedKeyItem[]) => boolean, thisArg?: any): S[]
       parameters:
         - id: callbackfn
           type: >-
@@ -180,8 +180,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'S[]'
         description: ''
+        type: 'S[]'
   - name: >-
       forEach((value: DeletedKeyItem, index: number, array: DeletedKeyItem[]) =>
       void, any)
@@ -217,7 +217,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function indexOf(searchElement: DeletedKeyItem, fromIndex?: number)'
+      content: >-
+        function indexOf(searchElement: DeletedKeyItem, fromIndex?: number):
+        number
       parameters:
         - id: searchElement
           type: <xref uid="azure-keyvault.DeletedKeyItem" />
@@ -228,8 +230,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at index 0.
       return:
-        type: number
         description: ''
+        type: number
   - name: join(string)
     uid: azure-keyvault.DeletedKeyListResult.join
     package: azure-keyvault
@@ -240,7 +242,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function join(separator?: string)'
+      content: 'function join(separator?: string): string'
       parameters:
         - id: separator
           type: string
@@ -249,8 +251,8 @@ methods:
             the resulting String. If omitted, the array elements are separated
             with a comma.
       return:
-        type: string
         description: ''
+        type: string
   - name: 'lastIndexOf(DeletedKeyItem, number)'
     uid: azure-keyvault.DeletedKeyListResult.lastIndexOf
     package: azure-keyvault
@@ -259,7 +261,9 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function lastIndexOf(searchElement: DeletedKeyItem, fromIndex?: number)'
+      content: >-
+        function lastIndexOf(searchElement: DeletedKeyItem, fromIndex?: number):
+        number
       parameters:
         - id: searchElement
           type: <xref uid="azure-keyvault.DeletedKeyItem" />
@@ -270,8 +274,8 @@ methods:
             The array index at which to begin the search. If fromIndex is
             omitted, the search starts at the last index in the array.
       return:
-        type: number
         description: ''
+        type: number
   - name: >-
       map<U>((value: DeletedKeyItem, index: number, array: DeletedKeyItem[]) =>
       U, any)
@@ -286,7 +290,7 @@ methods:
     syntax:
       content: >-
         function map<U>(callbackfn: (value: DeletedKeyItem, index: number,
-        array: DeletedKeyItem[]) => U, thisArg?: any)
+        array: DeletedKeyItem[]) => U, thisArg?: any): U[]
       parameters:
         - id: callbackfn
           type: >-
@@ -302,8 +306,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: 'U[]'
         description: ''
+        type: 'U[]'
   - name: pop()
     uid: azure-keyvault.DeletedKeyListResult.pop
     package: azure-keyvault
@@ -312,10 +316,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function pop()
+      content: 'function pop(): DeletedKeyItem | undefined'
       return:
-        type: <xref uid="azure-keyvault.DeletedKeyItem" /> | undefined
         description: ''
+        type: <xref uid="azure-keyvault.DeletedKeyItem" /> | undefined
   - name: 'push(DeletedKeyItem[])'
     uid: azure-keyvault.DeletedKeyListResult.push
     package: azure-keyvault
@@ -324,15 +328,15 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function push(items: DeletedKeyItem[])'
+      content: 'function push(items: DeletedKeyItem[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
           description: |
             New elements of the Array.
       return:
-        type: number
         description: ''
+        type: number
   - name: >-
       reduce((previousValue: DeletedKeyItem, currentValue: DeletedKeyItem,
       currentIndex: number, array: DeletedKeyItem[]) => DeletedKeyItem)
@@ -349,7 +353,7 @@ methods:
       content: >-
         function reduce(callbackfn: (previousValue: DeletedKeyItem,
         currentValue: DeletedKeyItem, currentIndex: number, array:
-        DeletedKeyItem[]) => DeletedKeyItem)
+        DeletedKeyItem[]) => DeletedKeyItem): DeletedKeyItem
       parameters:
         - id: callbackfn
           type: >-
@@ -360,8 +364,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-keyvault.DeletedKeyItem" />
         description: ''
+        type: <xref uid="azure-keyvault.DeletedKeyItem" />
   - name: >-
       reduce((previousValue: DeletedKeyItem, currentValue: DeletedKeyItem,
       currentIndex: number, array: DeletedKeyItem[]) => DeletedKeyItem,
@@ -376,7 +380,8 @@ methods:
       content: >-
         function reduce(callbackfn: (previousValue: DeletedKeyItem,
         currentValue: DeletedKeyItem, currentIndex: number, array:
-        DeletedKeyItem[]) => DeletedKeyItem, initialValue: DeletedKeyItem)
+        DeletedKeyItem[]) => DeletedKeyItem, initialValue: DeletedKeyItem):
+        DeletedKeyItem
       parameters:
         - id: callbackfn
           type: >-
@@ -387,8 +392,8 @@ methods:
           type: <xref uid="azure-keyvault.DeletedKeyItem" />
           description: ''
       return:
-        type: <xref uid="azure-keyvault.DeletedKeyItem" />
         description: ''
+        type: <xref uid="azure-keyvault.DeletedKeyItem" />
   - name: >-
       reduce<U>((previousValue: U, currentValue: DeletedKeyItem, currentIndex:
       number, array: DeletedKeyItem[]) => U, U)
@@ -405,7 +410,7 @@ methods:
       content: >-
         function reduce<U>(callbackfn: (previousValue: U, currentValue:
         DeletedKeyItem, currentIndex: number, array: DeletedKeyItem[]) => U,
-        initialValue: U)
+        initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -422,8 +427,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: >-
       reduceRight((previousValue: DeletedKeyItem, currentValue: DeletedKeyItem,
       currentIndex: number, array: DeletedKeyItem[]) => DeletedKeyItem)
@@ -441,7 +446,7 @@ methods:
       content: >-
         function reduceRight(callbackfn: (previousValue: DeletedKeyItem,
         currentValue: DeletedKeyItem, currentIndex: number, array:
-        DeletedKeyItem[]) => DeletedKeyItem)
+        DeletedKeyItem[]) => DeletedKeyItem): DeletedKeyItem
       parameters:
         - id: callbackfn
           type: >-
@@ -452,8 +457,8 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="azure-keyvault.DeletedKeyItem" />
         description: ''
+        type: <xref uid="azure-keyvault.DeletedKeyItem" />
   - name: >-
       reduceRight((previousValue: DeletedKeyItem, currentValue: DeletedKeyItem,
       currentIndex: number, array: DeletedKeyItem[]) => DeletedKeyItem,
@@ -468,7 +473,8 @@ methods:
       content: >-
         function reduceRight(callbackfn: (previousValue: DeletedKeyItem,
         currentValue: DeletedKeyItem, currentIndex: number, array:
-        DeletedKeyItem[]) => DeletedKeyItem, initialValue: DeletedKeyItem)
+        DeletedKeyItem[]) => DeletedKeyItem, initialValue: DeletedKeyItem):
+        DeletedKeyItem
       parameters:
         - id: callbackfn
           type: >-
@@ -479,8 +485,8 @@ methods:
           type: <xref uid="azure-keyvault.DeletedKeyItem" />
           description: ''
       return:
-        type: <xref uid="azure-keyvault.DeletedKeyItem" />
         description: ''
+        type: <xref uid="azure-keyvault.DeletedKeyItem" />
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: DeletedKeyItem,
       currentIndex: number, array: DeletedKeyItem[]) => U, U)
@@ -498,7 +504,7 @@ methods:
       content: >-
         function reduceRight<U>(callbackfn: (previousValue: U, currentValue:
         DeletedKeyItem, currentIndex: number, array: DeletedKeyItem[]) => U,
-        initialValue: U)
+        initialValue: U): U
       parameters:
         - id: callbackfn
           type: >-
@@ -515,8 +521,8 @@ methods:
             start the accumulation. The first call to the callbackfn function
             provides this value as an argument instead of an array value.
       return:
-        type: U
         description: ''
+        type: U
   - name: reverse()
     uid: azure-keyvault.DeletedKeyListResult.reverse
     package: azure-keyvault
@@ -525,10 +531,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function reverse()
+      content: 'function reverse(): DeletedKeyItem[]'
       return:
-        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
   - name: shift()
     uid: azure-keyvault.DeletedKeyListResult.shift
     package: azure-keyvault
@@ -537,10 +543,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function shift()
+      content: 'function shift(): DeletedKeyItem | undefined'
       return:
-        type: <xref uid="azure-keyvault.DeletedKeyItem" /> | undefined
         description: ''
+        type: <xref uid="azure-keyvault.DeletedKeyItem" /> | undefined
   - name: 'slice(number, number)'
     uid: azure-keyvault.DeletedKeyListResult.slice
     package: azure-keyvault
@@ -549,7 +555,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function slice(start?: number, end?: number)'
+      content: 'function slice(start?: number, end?: number): DeletedKeyItem[]'
       parameters:
         - id: start
           type: number
@@ -559,8 +565,8 @@ methods:
           description: |
             The end of the specified portion of the array.
       return:
-        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
   - name: >-
       some((value: DeletedKeyItem, index: number, array: DeletedKeyItem[]) =>
       unknown, any)
@@ -575,7 +581,7 @@ methods:
     syntax:
       content: >-
         function some(callbackfn: (value: DeletedKeyItem, index: number, array:
-        DeletedKeyItem[]) => unknown, thisArg?: any)
+        DeletedKeyItem[]) => unknown, thisArg?: any): boolean
       parameters:
         - id: callbackfn
           type: >-
@@ -592,8 +598,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: 'sort((a: DeletedKeyItem, b: DeletedKeyItem) => number)'
     uid: azure-keyvault.DeletedKeyListResult.sort
     package: azure-keyvault
@@ -604,7 +610,7 @@ methods:
     syntax:
       content: >-
         function sort(compareFn?: (a: DeletedKeyItem, b: DeletedKeyItem) =>
-        number)
+        number): this
       parameters:
         - id: compareFn
           type: '(a: DeletedKeyItem, b: DeletedKeyItem) =&gt; number'
@@ -613,8 +619,8 @@ methods:
             elements. If omitted, the elements are sorted in ascending, ASCII
             character order.
       return:
-        type: this
         description: ''
+        type: this
   - name: 'splice(number, number)'
     uid: azure-keyvault.DeletedKeyListResult.splice
     package: azure-keyvault
@@ -625,7 +631,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function splice(start: number, deleteCount?: number)'
+      content: 'function splice(start: number, deleteCount?: number): DeletedKeyItem[]'
       parameters:
         - id: start
           type: number
@@ -637,8 +643,8 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
   - name: 'splice(number, number, DeletedKeyItem[])'
     uid: azure-keyvault.DeletedKeyListResult.splice_1
     package: azure-keyvault
@@ -651,7 +657,7 @@ methods:
     syntax:
       content: >-
         function splice(start: number, deleteCount: number, items:
-        DeletedKeyItem[])
+        DeletedKeyItem[]): DeletedKeyItem[]
       parameters:
         - id: start
           type: number
@@ -666,8 +672,8 @@ methods:
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
         description: ''
+        type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
   - name: toLocaleString()
     uid: azure-keyvault.DeletedKeyListResult.toLocaleString
     package: azure-keyvault
@@ -678,10 +684,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toLocaleString()
+      content: 'function toLocaleString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: toString()
     uid: azure-keyvault.DeletedKeyListResult.toString
     package: azure-keyvault
@@ -690,10 +696,10 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function toString()
+      content: 'function toString(): string'
       return:
-        type: string
         description: ''
+        type: string
   - name: 'unshift(DeletedKeyItem[])'
     uid: azure-keyvault.DeletedKeyListResult.unshift
     package: azure-keyvault
@@ -702,13 +708,13 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function unshift(items: DeletedKeyItem[])'
+      content: 'function unshift(items: DeletedKeyItem[]): number'
       parameters:
         - id: items
           type: '<xref uid="azure-keyvault.DeletedKeyItem" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
-        type: number
         description: ''
+        type: number
 extends: Array&lt;<xref uid="azure-keyvault.DeletedKeyItem" />&gt;

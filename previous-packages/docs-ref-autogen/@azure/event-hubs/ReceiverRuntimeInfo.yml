@@ -22,8 +22,8 @@ properties:
     syntax:
       content: 'lastEnqueuedOffset?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: lastEnqueuedTimeUtc
     uid: '@azure/event-hubs.ReceiverRuntimeInfo.lastEnqueuedTimeUtc'
     package: '@azure/event-hubs'
@@ -35,8 +35,8 @@ properties:
     syntax:
       content: 'lastEnqueuedTimeUtc?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: lastSequenceNumber
     uid: '@azure/event-hubs.ReceiverRuntimeInfo.lastSequenceNumber'
     package: '@azure/event-hubs'
@@ -48,8 +48,8 @@ properties:
     syntax:
       content: 'lastSequenceNumber?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
   - name: partitionId
     uid: '@azure/event-hubs.ReceiverRuntimeInfo.partitionId'
     package: '@azure/event-hubs'
@@ -61,8 +61,8 @@ properties:
     syntax:
       content: 'partitionId: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: retrievalTime
     uid: '@azure/event-hubs.ReceiverRuntimeInfo.retrievalTime'
     package: '@azure/event-hubs'
@@ -74,5 +74,5 @@ properties:
     syntax:
       content: 'retrievalTime?: Date'
       return:
-        type: Date
         description: ''
+        type: Date

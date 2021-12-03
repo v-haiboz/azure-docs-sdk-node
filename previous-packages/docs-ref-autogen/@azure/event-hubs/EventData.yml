@@ -15,8 +15,8 @@ properties:
     syntax:
       content: 'annotations?: EventHubMessageAnnotations'
       return:
-        type: <xref uid="@azure/event-hubs.EventHubMessageAnnotations" />
         description: ''
+        type: <xref uid="@azure/event-hubs.EventHubMessageAnnotations" />
   - name: applicationProperties
     uid: '@azure/event-hubs.EventData.applicationProperties'
     package: '@azure/event-hubs'
@@ -29,8 +29,8 @@ properties:
     syntax:
       content: 'applicationProperties?: Dictionary<any>'
       return:
-        type: Dictionary&lt;any&gt;
         description: ''
+        type: Dictionary&lt;any&gt;
   - name: body
     uid: '@azure/event-hubs.EventData.body'
     package: '@azure/event-hubs'
@@ -41,8 +41,8 @@ properties:
     syntax:
       content: 'body: any'
       return:
-        type: any
         description: ''
+        type: any
   - name: enqueuedTimeUtc
     uid: '@azure/event-hubs.EventData.enqueuedTimeUtc'
     package: '@azure/event-hubs'
@@ -53,8 +53,8 @@ properties:
     syntax:
       content: 'enqueuedTimeUtc?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: header
     uid: '@azure/event-hubs.EventData.header'
     package: '@azure/event-hubs'
@@ -65,8 +65,8 @@ properties:
     syntax:
       content: 'header?: MessageHeader'
       return:
-        type: MessageHeader
         description: ''
+        type: MessageHeader
   - name: lastEnqueuedOffset
     uid: '@azure/event-hubs.EventData.lastEnqueuedOffset'
     package: '@azure/event-hubs'
@@ -77,8 +77,8 @@ properties:
     syntax:
       content: 'lastEnqueuedOffset?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: lastEnqueuedTime
     uid: '@azure/event-hubs.EventData.lastEnqueuedTime'
     package: '@azure/event-hubs'
@@ -89,8 +89,8 @@ properties:
     syntax:
       content: 'lastEnqueuedTime?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: lastSequenceNumber
     uid: '@azure/event-hubs.EventData.lastSequenceNumber'
     package: '@azure/event-hubs'
@@ -103,8 +103,8 @@ properties:
     syntax:
       content: 'lastSequenceNumber?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
   - name: offset
     uid: '@azure/event-hubs.EventData.offset'
     package: '@azure/event-hubs'
@@ -115,8 +115,8 @@ properties:
     syntax:
       content: 'offset?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: partitionKey
     uid: '@azure/event-hubs.EventData.partitionKey'
     package: '@azure/event-hubs'
@@ -132,8 +132,8 @@ properties:
     syntax:
       content: 'partitionKey?: string | null'
       return:
-        type: string | null
         description: ''
+        type: string | null
   - name: properties
     uid: '@azure/event-hubs.EventData.properties'
     package: '@azure/event-hubs'
@@ -146,8 +146,8 @@ properties:
     syntax:
       content: 'properties?: MessageProperties'
       return:
-        type: MessageProperties
         description: ''
+        type: MessageProperties
   - name: retrievalTime
     uid: '@azure/event-hubs.EventData.retrievalTime'
     package: '@azure/event-hubs'
@@ -158,8 +158,8 @@ properties:
     syntax:
       content: 'retrievalTime?: Date'
       return:
-        type: Date
         description: ''
+        type: Date
   - name: sequenceNumber
     uid: '@azure/event-hubs.EventData.sequenceNumber'
     package: '@azure/event-hubs'
@@ -170,8 +170,8 @@ properties:
     syntax:
       content: 'sequenceNumber?: undefined | number'
       return:
-        type: undefined | number
         description: ''
+        type: undefined | number
 functions:
   - name: fromAmqpMessage(Message)
     uid: '@azure/event-hubs.EventData.fromAmqpMessage'
@@ -181,15 +181,15 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function fromAmqpMessage(msg: Message)'
+      content: 'function fromAmqpMessage(msg: Message): EventData'
       parameters:
         - id: msg
           type: Message
           description: |
             The AMQP message that needs to be converted to EventData.
       return:
-        type: <xref uid="@azure/event-hubs.EventData" />
         description: ''
+        type: <xref uid="@azure/event-hubs.EventData" />
   - name: toAmqpMessage(EventData)
     uid: '@azure/event-hubs.EventData.toAmqpMessage'
     package: '@azure/event-hubs'
@@ -198,12 +198,12 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function toAmqpMessage(data: EventData)'
+      content: 'function toAmqpMessage(data: EventData): Message'
       parameters:
         - id: data
           type: <xref uid="@azure/event-hubs.EventData" />
           description: |
             The EventData object that needs to be converted to an AMQP message.
       return:
-        type: Message
         description: ''
+        type: Message

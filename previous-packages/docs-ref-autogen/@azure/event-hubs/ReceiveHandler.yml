@@ -39,8 +39,8 @@ properties:
     syntax:
       content: 'address: string | undefined'
       return:
-        type: string | undefined
         description: ''
+        type: string | undefined
   - name: consumerGroup
     uid: '@azure/event-hubs.ReceiveHandler.consumerGroup'
     package: '@azure/event-hubs'
@@ -56,8 +56,8 @@ properties:
     syntax:
       content: 'consumerGroup: string | undefined'
       return:
-        type: string | undefined
         description: ''
+        type: string | undefined
   - name: epoch
     uid: '@azure/event-hubs.ReceiveHandler.epoch'
     package: '@azure/event-hubs'
@@ -69,8 +69,8 @@ properties:
     syntax:
       content: 'epoch: number | undefined'
       return:
-        type: number | undefined
         description: ''
+        type: number | undefined
   - name: identifier
     uid: '@azure/event-hubs.ReceiveHandler.identifier'
     package: '@azure/event-hubs'
@@ -84,8 +84,8 @@ properties:
     syntax:
       content: 'identifier: string | undefined'
       return:
-        type: string | undefined
         description: ''
+        type: string | undefined
   - name: isReceiverOpen
     uid: '@azure/event-hubs.ReceiveHandler.isReceiverOpen'
     package: '@azure/event-hubs'
@@ -99,8 +99,8 @@ properties:
     syntax:
       content: 'isReceiverOpen: boolean'
       return:
-        type: boolean
         description: ''
+        type: boolean
   - name: name
     uid: '@azure/event-hubs.ReceiveHandler.name'
     package: '@azure/event-hubs'
@@ -112,8 +112,8 @@ properties:
     syntax:
       content: 'name: string'
       return:
-        type: string
         description: ''
+        type: string
   - name: partitionId
     uid: '@azure/event-hubs.ReceiveHandler.partitionId'
     package: '@azure/event-hubs'
@@ -129,8 +129,8 @@ properties:
     syntax:
       content: 'partitionId: string | number | undefined'
       return:
-        type: string | number | undefined
         description: ''
+        type: string | number | undefined
   - name: runtimeInfo
     uid: '@azure/event-hubs.ReceiveHandler.runtimeInfo'
     package: '@azure/event-hubs'
@@ -148,8 +148,8 @@ properties:
     syntax:
       content: 'runtimeInfo: ReceiverRuntimeInfo | undefined'
       return:
-        type: <xref uid="@azure/event-hubs.ReceiverRuntimeInfo" /> | undefined
         description: ''
+        type: <xref uid="@azure/event-hubs.ReceiverRuntimeInfo" /> | undefined
 methods:
   - name: stop()
     uid: '@azure/event-hubs.ReceiveHandler.stop'
@@ -159,7 +159,7 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function stop()
+      content: 'function stop(): Promise<void>'
       return:
-        type: Promise&lt;void&gt;
         description: Promise<void>
+        type: Promise&lt;void&gt;

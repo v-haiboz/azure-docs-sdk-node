@@ -30,8 +30,8 @@ properties:
     syntax:
       content: 'dataTransformer?: DataTransformer'
       return:
-        type: DataTransformer
         description: ''
+        type: DataTransformer
   - name: managementSessionAddress
     uid: '@azure/event-hubs.ConnectionContextOptions.managementSessionAddress'
     package: '@azure/event-hubs'
@@ -43,8 +43,8 @@ properties:
     syntax:
       content: 'managementSessionAddress?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: managementSessionAudience
     uid: '@azure/event-hubs.ConnectionContextOptions.managementSessionAudience'
     package: '@azure/event-hubs'
@@ -56,8 +56,8 @@ properties:
     syntax:
       content: 'managementSessionAudience?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: tokenProvider
     uid: '@azure/event-hubs.ConnectionContextOptions.tokenProvider'
     package: '@azure/event-hubs'
@@ -73,8 +73,8 @@ properties:
     syntax:
       content: 'tokenProvider?: TokenProvider'
       return:
-        type: TokenProvider
         description: ''
+        type: TokenProvider
   - name: userAgent
     uid: '@azure/event-hubs.ConnectionContextOptions.userAgent'
     package: '@azure/event-hubs'
@@ -90,8 +90,8 @@ properties:
     syntax:
       content: 'userAgent?: undefined | string'
       return:
-        type: undefined | string
         description: ''
+        type: undefined | string
   - name: webSocket
     uid: '@azure/event-hubs.ConnectionContextOptions.webSocket'
     package: '@azure/event-hubs'
@@ -117,8 +117,8 @@ properties:
     syntax:
       content: 'webSocket?: WebSocketImpl'
       return:
-        type: WebSocketImpl
         description: ''
+        type: WebSocketImpl
   - name: webSocketConstructorOptions
     uid: '@azure/event-hubs.ConnectionContextOptions.webSocketConstructorOptions'
     package: '@azure/event-hubs'
@@ -132,6 +132,6 @@ properties:
     syntax:
       content: 'webSocketConstructorOptions?: any'
       return:
-        type: any
         description: ''
+        type: any
 extends: <xref uid="@azure/event-hubs.ClientOptions" />
