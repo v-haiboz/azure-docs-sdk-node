@@ -41,7 +41,7 @@ properties:
       return:
         description: ''
         type: number
-methods:
+inheritedMethods:
   - name: 'concat(ConcatArray<Operation>[])'
     uid: azure-arm-storage.OperationListResult.concat
     package: azure-arm-storage

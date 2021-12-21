@@ -50,7 +50,7 @@ properties:
       return:
         description: ''
         type: string
-methods:
+inheritedMethods:
   - name: 'concat(ConcatArray<DeletedVault>[])'
     uid: azure-arm-keyvault.DeletedVaultListResult.concat
     package: azure-arm-keyvault

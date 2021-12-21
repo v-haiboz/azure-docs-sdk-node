@@ -250,6 +250,34 @@ properties:
       return:
         description: ''
         type: boolean
+inheritedMethods:
+  - name: setProxy(Proxy)
+    uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.setProxy
+    package: azure-storage
+    summary: Sets proxy object specified by caller.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setProxy(proxy: Proxy)'
+      parameters:
+        - id: proxy
+          type: >-
+            <xref
+            uid="azure-storage.azurestorage.common.services.storageserviceclient.Proxy"
+            />
+          description: |
+            proxy to use for tunneling
+                                                   {
+                                                    host: hostname
+                                                    port: port number
+                                                    proxyAuth: 'user:password' for basic auth
+                                                    headers: {...} headers for proxy server
+                                                    key: key for proxy server
+                                                    ca: ca for proxy server
+                                                    cert: cert for proxy server
+                                                   }
+                                                   if null or undefined, clears proxy
 methods:
   - name: 'abortCopyBlob(string, string, string, BlobRequestOptions, ErrorOrResponse)'
     uid: >-
@@ -6081,33 +6109,6 @@ methods:
             uid="azure-storage.azurestorage.services.blob.blobservice.BlobService.BlobResult"
             />&gt;
           description: ''
-  - name: setProxy(Proxy)
-    uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.setProxy
-    package: azure-storage
-    summary: Sets proxy object specified by caller.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function setProxy(proxy: Proxy)'
-      parameters:
-        - id: proxy
-          type: >-
-            <xref
-            uid="azure-storage.azurestorage.common.services.storageserviceclient.Proxy"
-            />
-          description: |
-            proxy to use for tunneling
-                                                   {
-                                                    host: hostname
-                                                    port: port number
-                                                    proxyAuth: 'user:password' for basic auth
-                                                    headers: {...} headers for proxy server
-                                                    key: key for proxy server
-                                                    ca: ca for proxy server
-                                                    cert: cert for proxy server
-                                                   }
-                                                   if null or undefined, clears proxy
   - name: 'setServiceProperties(BlobServiceProperties, ErrorOrResponse)'
     uid: >-
       azure-storage.azurestorage.services.blob.blobservice.BlobService.setServiceProperties_1

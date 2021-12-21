@@ -241,6 +241,34 @@ properties:
       return:
         description: ''
         type: boolean
+inheritedMethods:
+  - name: setProxy(Proxy)
+    uid: azure-storage.azurestorage.services.queue.QueueService.setProxy
+    package: azure-storage
+    summary: Sets proxy object specified by caller.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setProxy(proxy: Proxy)'
+      parameters:
+        - id: proxy
+          type: >-
+            <xref
+            uid="azure-storage.azurestorage.common.services.storageserviceclient.Proxy"
+            />
+          description: |
+            proxy to use for tunneling
+                                                   {
+                                                    host: hostname
+                                                    port: port number
+                                                    proxyAuth: 'user:password' for basic auth
+                                                    headers: {...} headers for proxy server
+                                                    key: key for proxy server
+                                                    ca: ca for proxy server
+                                                    cert: cert for proxy server
+                                                   }
+                                                   if null or undefined, clears proxy
 methods:
   - name: 'clearMessages(string, ErrorOrResponse)'
     uid: azure-storage.azurestorage.services.queue.QueueService.clearMessages_1
@@ -1502,33 +1530,6 @@ methods:
                                                                                     if an error occurs; otherwise `result` will contain
                                                                                     the messages.
                                                                                     `response` will contain information related to this operation.
-  - name: setProxy(Proxy)
-    uid: azure-storage.azurestorage.services.queue.QueueService.setProxy
-    package: azure-storage
-    summary: Sets proxy object specified by caller.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function setProxy(proxy: Proxy)'
-      parameters:
-        - id: proxy
-          type: >-
-            <xref
-            uid="azure-storage.azurestorage.common.services.storageserviceclient.Proxy"
-            />
-          description: |
-            proxy to use for tunneling
-                                                   {
-                                                    host: hostname
-                                                    port: port number
-                                                    proxyAuth: 'user:password' for basic auth
-                                                    headers: {...} headers for proxy server
-                                                    key: key for proxy server
-                                                    ca: ca for proxy server
-                                                    cert: cert for proxy server
-                                                   }
-                                                   if null or undefined, clears proxy
   - name: >-
       setQueueAcl(string, [key: string]: AccessPolicy,
       ErrorOrResult<QueueResult>)

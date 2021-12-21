@@ -50,7 +50,7 @@ properties:
       return:
         description: ''
         type: string
-methods:
+inheritedMethods:
   - name: 'concat(ConcatArray<KeyItem>[])'
     uid: azure-keyvault.KeyListResult.concat
     package: azure-keyvault

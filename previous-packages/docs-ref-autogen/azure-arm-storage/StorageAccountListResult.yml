@@ -37,7 +37,7 @@ properties:
       return:
         description: ''
         type: number
-methods:
+inheritedMethods:
   - name: 'concat(ConcatArray<StorageAccount>[])'
     uid: azure-arm-storage.StorageAccountListResult.concat
     package: azure-arm-storage

@@ -50,7 +50,7 @@ properties:
       return:
         description: ''
         type: string
-methods:
+inheritedMethods:
   - name: 'concat(ConcatArray<SasDefinitionItem>[])'
     uid: azure-keyvault.SasDefinitionListResult.concat
     package: azure-keyvault

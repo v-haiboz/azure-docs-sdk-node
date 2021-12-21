@@ -50,7 +50,7 @@ properties:
       return:
         description: ''
         type: string
-methods:
+inheritedMethods:
   - name: 'concat(ConcatArray<Job>[])'
     uid: azure-arm-storageimportexport.JobListResult.concat
     package: azure-arm-storageimportexport

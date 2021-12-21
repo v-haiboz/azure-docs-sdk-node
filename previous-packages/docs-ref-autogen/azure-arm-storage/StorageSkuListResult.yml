@@ -37,7 +37,7 @@ properties:
       return:
         description: ''
         type: number
-methods:
+inheritedMethods:
   - name: 'concat(ConcatArray<Sku>[])'
     uid: azure-arm-storage.StorageSkuListResult.concat
     package: azure-arm-storage

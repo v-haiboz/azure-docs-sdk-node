@@ -50,7 +50,7 @@ properties:
       return:
         description: ''
         type: string
-methods:
+inheritedMethods:
   - name: 'concat(ConcatArray<DeletedCertificateItem>[])'
     uid: azure-keyvault.DeletedCertificateListResult.concat
     package: azure-keyvault
