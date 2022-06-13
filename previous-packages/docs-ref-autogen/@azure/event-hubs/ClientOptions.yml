@@ -9,6 +9,24 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: tokenProvider
+    uid: '@azure/event-hubs.ClientOptions.tokenProvider'
+    package: '@azure/event-hubs'
+    summary: >-
+      {TokenProvider} [tokenProvider] - The token provider that provides the
+      token for authentication.
+
+      Default value: SasTokenProvider.
+    fullName: tokenProvider
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tokenProvider?: TokenProvider'
+      return:
+        description: ''
+        type: TokenProvider
+inheritedProperties:
   - name: dataTransformer
     uid: '@azure/event-hubs.ClientOptions.dataTransformer'
     package: '@azure/event-hubs'
@@ -32,23 +50,6 @@ properties:
       return:
         description: ''
         type: DataTransformer
-  - name: tokenProvider
-    uid: '@azure/event-hubs.ClientOptions.tokenProvider'
-    package: '@azure/event-hubs'
-    summary: >-
-      {TokenProvider} [tokenProvider] - The token provider that provides the
-      token for authentication.
-
-      Default value: SasTokenProvider.
-    fullName: tokenProvider
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'tokenProvider?: TokenProvider'
-      return:
-        description: ''
-        type: TokenProvider
   - name: userAgent
     uid: '@azure/event-hubs.ClientOptions.userAgent'
     package: '@azure/event-hubs'

@@ -9,29 +9,6 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: dataTransformer
-    uid: '@azure/event-hubs.ConnectionContextOptions.dataTransformer'
-    package: '@azure/event-hubs'
-    summary: >-
-      {DataTransformer} [dataTransformer] The data transformer that will be used
-      to encode
-
-      and decode the sent and received messages respectively. If not provided
-      then we will use the
-
-      DefaultDataTransformer. The default transformer should handle majority of
-      the cases. This
-
-      option needs to be used only for specialized scenarios.
-    fullName: dataTransformer
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'dataTransformer?: DataTransformer'
-      return:
-        description: ''
-        type: DataTransformer
   - name: managementSessionAddress
     uid: '@azure/event-hubs.ConnectionContextOptions.managementSessionAddress'
     package: '@azure/event-hubs'
@@ -58,6 +35,30 @@ properties:
       return:
         description: ''
         type: undefined | string
+inheritedProperties:
+  - name: dataTransformer
+    uid: '@azure/event-hubs.ConnectionContextOptions.dataTransformer'
+    package: '@azure/event-hubs'
+    summary: >-
+      {DataTransformer} [dataTransformer] The data transformer that will be used
+      to encode
+
+      and decode the sent and received messages respectively. If not provided
+      then we will use the
+
+      DefaultDataTransformer. The default transformer should handle majority of
+      the cases. This
+
+      option needs to be used only for specialized scenarios.
+    fullName: dataTransformer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        description: ''
+        type: DataTransformer
   - name: tokenProvider
     uid: '@azure/event-hubs.ConnectionContextOptions.tokenProvider'
     package: '@azure/event-hubs'
