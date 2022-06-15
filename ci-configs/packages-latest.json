@@ -502,7 +502,7 @@
       "name": "@azure/cognitiveservices-qnamaker-runtime"
     },
     {
-      "name": "@azure/arm-appconfiguration@2.0.0"
+      "name": "@azure/arm-appconfiguration@3.0.0"
     },
     {
       "name": "@azure/arm-appplatform@2.0.0"
