@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-storagesync",
+  "Version": "9.0.2-alpha.20220506.3",
+  "DevVersion": "9.0.2-alpha.20220615.1",
+  "DirectoryPath": "sdk/storagesync/arm-storagesync",
+  "ServiceDirectory": "storagesync",
+  "ReadMePath": "sdk/storagesync/arm-storagesync/README.md",
+  "ChangeLogPath": "sdk/storagesync/arm-storagesync/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-storagesync",
+  "ReleaseStatus": "Unreleased"
+}
