@@ -3,14 +3,12 @@ title: Azure Container Registry client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/container-registry, containerregistry
 author: jeremymeng
 ms.author: yumeng
-ms.date: 04/05/2022
+ms.date: 06/18/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: javascript
 ms.service: containerregistry
 ---
-# Azure Container Registry client library for JavaScript - Version 1.1.0-beta.1 
+# Azure Container Registry client library for JavaScript - Version 1.1.0-alpha.20220524.1 
 
 
 Azure Container Registry allows you to store and manage container images and artifacts in a private registry for all types of container deployments.
@@ -37,7 +35,7 @@ Key links:
 
 - [LTS versions of Node.js](https://nodejs.org/about/releases/)
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.1.0-beta.1/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUPPORT.md) for more details.
 
 > Note: This package cannot be used in the browser due to service limitations, please refer to [this document][cors] for guidance.
 
@@ -84,7 +82,7 @@ Note that these samples assume you have a `CONTAINER_REGISTRY_ENDPOINT` environm
 
 #### National Clouds
 
-To authenticate with a registry in a [National Cloud](https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud), you will need to make the following additions to your configuration:
+To authenticate with a registry in a [National Cloud](/azure/active-directory/develop/authentication-national-cloud), you will need to make the following additions to your configuration:
 
 - Set the `authorityHost` in the credential options or via the `AZURE_AUTHORITY_HOST` environment variable
 - Set the `audience` in `ContainerRegistryClientOptions`
@@ -107,13 +105,13 @@ const client = new ContainerRegistryClient(
 );
 ```
 
-For more information on using AAD with Azure Container Registry, please see the service's [Authentication Overview](https://docs.microsoft.com/azure/container-registry/container-registry-authentication).
+For more information on using AAD with Azure Container Registry, please see the service's [Authentication Overview](/azure/container-registry/container-registry-authentication).
 
 ## Key concepts
 
 A **registry** stores Docker images and [OCI Artifacts](https://opencontainers.org/). An image or artifact consists of a **manifest** and **layers**. An image's manifest describes the layers that make up the image, and is uniquely identified by its **digest**. An image can also be "tagged" to give it a human-readable alias. An image or artifact can have zero or more **tags** associated with it, and each tag uniquely identifies the image. A collection of images that share the same name but have different tags, is referred to as a **repository**.
 
-For more information please see [Container Registry Concepts](https://docs.microsoft.com/azure/container-registry/container-registry-concepts).
+For more information please see [Container Registry Concepts](/azure/container-registry/container-registry-concepts).
 
 ## Examples
 
@@ -267,7 +265,7 @@ main().catch((err) => {
 Enabling logging may help uncover useful information about failures. In order to see a log of HTTP requests and responses, set the `AZURE_LOG_LEVEL` environment variable to `info`. Alternatively, logging can be enabled at runtime by calling `setLogLevel` in the `@azure/logger`:
 
 ```javascript
-import { setLogLevel } from "@azure/logger";
+const { setLogLevel } = require("@azure/logger");
 
 setLogLevel("info");
 ```
@@ -278,7 +276,7 @@ Please take a look at the [samples][samples] directory for detailed examples tha
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.1.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
@@ -288,20 +286,20 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 [azure_sub]: https://azure.microsoft.com/free/
 [acr_resource]: https://ms.portal.azure.com/#create/Microsoft.ContainerRegistry
-[source]: https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.1.0-beta.1/sdk/containerregistry/container-registry/
+[source]: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/containerregistry/container-registry/
 [package]: https://www.npmjs.com/package/@azure/container-registry
-[api_docs]: https://docs.microsoft.com/javascript/api/@azure/container-registry
-[rest_docs]: https://docs.microsoft.com/rest/api/containerregistry/
-[product_docs]: https://docs.microsoft.com/azure/container-registry/
-[cors]: https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.1.0-beta.1/samples/cors/ts/README.md
-[samples]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/container-registry_1.1.0-beta.1/sdk/containerregistry/container-registry/samples
-[container_registry_docs]: https://docs.microsoft.com/azure/container-registry/container-registry-intro
-[container_registry_create_ps]: https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell
-[container_registry_create_cli]: https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli
-[container_registry_create_portal]: https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal
-[container_registry_concepts]: https://docs.microsoft.com/azure/container-registry/container-registry-concepts
-[azure_cli]: https://docs.microsoft.com/cli/azure
+[api_docs]: /javascript/api/@azure/container-registry
+[rest_docs]: /rest/api/containerregistry/
+[product_docs]: /azure/container-registry/
+[cors]: https://github.com/Azure/azure-sdk-for-js/blob/main/samples/cors/ts/README.md
+[samples]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/containerregistry/container-registry/samples
+[container_registry_docs]: /azure/container-registry/container-registry-intro
+[container_registry_create_ps]: /azure/container-registry/container-registry-get-started-powershell
+[container_registry_create_cli]: /azure/container-registry/container-registry-get-started-azure-cli
+[container_registry_create_portal]: /azure/container-registry/container-registry-get-started-portal
+[container_registry_concepts]: /azure/container-registry/container-registry-concepts
+[azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
-[identity]: https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.1.0-beta.1/sdk/identity/identity/README.md
+[identity]: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/identity/identity/README.md
 [az_sdk_js]: https://github.com/Azure/azure-sdk-for-js
 
