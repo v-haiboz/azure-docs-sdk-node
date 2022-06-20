@@ -834,3 +834,11 @@ Removed @azure/arm-app@1.0.0-beta.1 because of docs package validation failure o
 	Start to install npm package @azure/arm-app@1.0.0-beta.1.
 	[User Error]: Failed to install npm package @azure/arm-app@1.0.0-beta.1 with command: 
 		npm install @azure/arm-app@1.0.0-beta.1 --prefix . 2>&1
+Removed @azure/arm-app@1.0.0-beta.1 because of docs package validation failure on 2022-06-20 22:46 +00:00
+	npm ERR! code ETARGET
+	npm ERR! notarget No matching version found for @azure/arm-app@1.0.0-beta.1.
+	npm ERR! notarget In most cases you or one of your dependencies are requesting
+	npm ERR! notarget a package version that doesn't exist.
+	System.Management.Automation.RemoteException
+	npm ERR! A complete log of this run can be found in:
+	npm ERR!     /home/vsts/.npm/_logs/2022-06-20T22_46_42_926Z-debug-0.log
