@@ -3,12 +3,12 @@ title: Azure Communication Email client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/communication-email, communication
 author: petrsvihlik
 ms.author: petrsvihlik
-ms.date: 05/24/2022
+ms.date: 06/21/2022
 ms.topic: reference
 ms.devlang: javascript
 ms.service: communication
 ---
-# Azure Communication Email client library for JavaScript - Version 1.0.0-beta.1 
+# Azure Communication Email client library for JavaScript - Version 1.0.0-alpha.20220524.1 
 
 
 This package contains a JavaScript/TypeScript SDK for Azure Communication Services for Email.
