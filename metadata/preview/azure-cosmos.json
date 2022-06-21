@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/cosmos",
+  "Version": "3.16.2-alpha.20220601.2",
+  "DevVersion": "3.16.2-alpha.20220621.1",
+  "DirectoryPath": "sdk/cosmosdb/cosmos",
+  "ServiceDirectory": "cosmosdb",
+  "ReadMePath": "sdk/cosmosdb/cosmos/README.md",
+  "ChangeLogPath": "sdk/cosmosdb/cosmos/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "client",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-cosmos",
+  "ReleaseStatus": "Unreleased"
+}
