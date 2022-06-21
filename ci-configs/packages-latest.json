@@ -614,9 +614,6 @@
       "name": "@azure/arm-datafactory@10.6.0"
     },
     {
-      "name": "@azure/arm-consumption@9.0.1"
-    },
-    {
       "name": "@azure/arm-cosmosdb@15.0.0"
     },
     {
