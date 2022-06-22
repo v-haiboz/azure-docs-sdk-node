@@ -1,23 +1,23 @@
 ---
-title: Azure Service client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/arm-machinelearning, machinelearning
-author: xirzec
-ms.author: jeffish
+title: Azure ML Web Services Management client library for JavaScript
+keywords: Azure, javascript, SDK, API, @azure/arm-webservices, machinelearning
+author: qiaozha
+ms.author: qiaozha
 ms.date: 06/22/2022
 ms.topic: reference
 ms.devlang: javascript
 ms.service: machinelearning
 ---
-# Azure Service client library for JavaScript - Version 1.0.0-alpha.20220527.3 
+# Azure ML Web Services Management client library for JavaScript - Version 1.0.2-alpha.20220428.2 
 
 
-This package contains an isomorphic SDK (runs both in Node.js and in browsers) for Azure Service client.
+This package contains an isomorphic SDK (runs both in Node.js and in browsers) for Azure ML Web Services Management client.
 
-These APIs allow end users to operate on Azure Machine Learning Workspace resources.
+These APIs allow end users to operate on Azure Machine Learning Web Services resources. They support the following operations:<ul><li>Create or update a web service</li><li>Get a web service</li><li>Patch a web service</li><li>Delete a web service</li><li>Get All Web Services in a Resource Group </li><li>Get All Web Services in a Subscription</li><li>Get Web Services Keys</li></ul>
 
-[Source code](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/machinelearning/arm-machinelearning) |
-[Package (NPM)](https://www.npmjs.com/package/@azure/arm-machinelearning) |
-[API reference documentation](/javascript/api/@azure/arm-machinelearning?view=azure-node-preview) |
+[Source code](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/machinelearning/arm-webservices) |
+[Package (NPM)](https://www.npmjs.com/package/@azure/arm-webservices) |
+[API reference documentation](/javascript/api/@azure/arm-webservices) |
 [Samples](https://github.com/Azure-Samples/azure-samples-js-management)
 
 ## Getting started
@@ -33,18 +33,18 @@ See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUP
 
 - An [Azure subscription][azure_sub].
 
-### Install the `@azure/arm-machinelearning` package
+### Install the `@azure/arm-webservices` package
 
-Install the Azure Service client library for JavaScript with `npm`:
+Install the Azure ML Web Services Management client library for JavaScript with `npm`:
 
 ```bash
-npm install @azure/arm-machinelearning
+npm install @azure/arm-webservices
 ```
 
-### Create and authenticate a `AzureMachineLearningWorkspaces`
+### Create and authenticate a `AzureMLWebServicesManagementClient`
 
-To create a client object to access the Azure Service API, you will need the `endpoint` of your Azure Service resource and a `credential`. The Azure Service client can use Azure Active Directory credentials to authenticate.
-You can find the endpoint for your Azure Service resource in the [Azure Portal][azure_portal].
+To create a client object to access the Azure ML Web Services Management API, you will need the `endpoint` of your Azure ML Web Services Management resource and a `credential`. The Azure ML Web Services Management client can use Azure Active Directory credentials to authenticate.
+You can find the endpoint for your Azure ML Web Services Management resource in the [Azure Portal][azure_portal].
 
 You can authenticate with Azure Active Directory using a credential from the [@azure/identity][azure_identity] library or [an existing AAD Token](https://github.com/Azure/azure-sdk-for-js/blob/master/sdk/identity/identity/samples/AzureIdentityExamples.md#authenticating-with-a-pre-fetched-access-token).
 
@@ -54,25 +54,25 @@ To use the [DefaultAzureCredential][defaultazurecredential] provider shown below
 npm install @azure/identity
 ```
 
-You will also need to **register a new AAD application and grant access to Azure Service** by assigning the suitable role to your service principal (note: roles such as `"Owner"` will not grant the necessary permissions).
+You will also need to **register a new AAD application and grant access to Azure ML Web Services Management** by assigning the suitable role to your service principal (note: roles such as `"Owner"` will not grant the necessary permissions).
 Set the values of the client ID, tenant ID, and client secret of the AAD application as environment variables: `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_CLIENT_SECRET`.
 
 For more information about how to create an Azure AD Application check out [this guide](/azure/active-directory/develop/howto-create-service-principal-portal).
 
 ```javascript
-const { AzureMachineLearningWorkspaces } = require("@azure/arm-machinelearning");
+const { AzureMLWebServicesManagementClient } = require("@azure/arm-webservices");
 const { DefaultAzureCredential } = require("@azure/identity");
 // For client-side applications running in the browser, use InteractiveBrowserCredential instead of DefaultAzureCredential. See https://aka.ms/azsdk/js/identity/examples for more details.
 
 const subscriptionId = "00000000-0000-0000-0000-000000000000";
-const client = new AzureMachineLearningWorkspaces(new DefaultAzureCredential(), subscriptionId);
+const client = new AzureMLWebServicesManagementClient(new DefaultAzureCredential(), subscriptionId);
 
 // For client-side applications running in the browser, use this code instead:
 // const credential = new InteractiveBrowserCredential({
 //   tenantId: "<YOUR_TENANT_ID>",
 //   clientId: "<YOUR_CLIENT_ID>"
 // });
-// const client = new AzureMachineLearningWorkspaces(credential, subscriptionId);
+// const client = new AzureMLWebServicesManagementClient(credential, subscriptionId);
 ```
 
 
@@ -81,9 +81,9 @@ To use this client library in the browser, first you need to use a bundler. For 
 
 ## Key concepts
 
-### AzureMachineLearningWorkspaces
+### AzureMLWebServicesManagementClient
 
-`AzureMachineLearningWorkspaces` is the primary interface for developers using the Azure Service client library. Explore the methods on this client object to understand the different features of the Azure Service service that you can access.
+`AzureMLWebServicesManagementClient` is the primary interface for developers using the Azure ML Web Services Management client library. Explore the methods on this client object to understand the different features of the Azure ML Web Services Management service that you can access.
 
 ## Troubleshooting
 
@@ -110,7 +110,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fmachinelearning%2Farm-machinelearning%2FREADME.png)
+![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fmachinelearning%2Farm-webservices%2FREADME.png)
 
 [azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
